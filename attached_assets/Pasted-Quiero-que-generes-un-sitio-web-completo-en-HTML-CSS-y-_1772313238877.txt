@@ -1,0 +1,175 @@
+Quiero que generes un sitio web completo en HTML, CSS y JavaScript para una invitación digital de boda moderna e interactiva.
+
+Debe ser visualmente elegante, minimalista y emocional. Diseño premium.
+
+🎨 Estilo visual
+
+Colores suaves y románticos:
+
+Fondo crema (#F8F4EF)
+
+Detalles dorado suave (#C6A75E)
+
+Rosa empolvado (#D8A7B1)
+
+Texto gris oscuro elegante (#3A3A3A)
+
+Tipografía:
+
+Títulos con tipografía serif elegante estilo Playfair Display
+
+Texto con tipografía limpia estilo Poppins o Montserrat
+
+Mucho espacio en blanco
+
+Animaciones suaves
+
+Diseño responsive (mobile first)
+
+Estética moderna tipo revista de lujo
+
+✉️ Primera pantalla (interactiva)
+
+La pantalla inicial debe simular un sobre elegante cerrado en el centro de la pantalla.
+
+Características:
+
+Fondo suave con textura sutil tipo papel.
+
+Sobre minimalista blanco con detalles dorados.
+
+Debe decir:
+
+“Tienes una invitación”
+
+El usuario debe hacer click en el sobre para abrirlo.
+
+Al hacer click:
+
+El sobre se abre con animación suave.
+
+La invitación aparece con animación tipo fade + slide.
+
+Reproducir música romántica suave automáticamente (con botón para pausar).
+
+💍 Contenido de la invitación
+
+Después de abrir el sobre, mostrar secciones con animaciones suaves al hacer scroll:
+
+1️⃣ Portada
+
+Mostrar:
+
+“Nos Casamos”
+María & Alejandro
+15 de Octubre 2026
+
+Con animación elegante.
+
+2️⃣ Nuestra Historia
+
+Sección con fondo suave rosado.
+Texto emocional corto.
+Animación al aparecer.
+
+3️⃣ Detalles del Evento
+
+Fecha:
+15 de Octubre 2026
+
+Ceremonia:
+5:00 PM
+
+Recepción:
+7:00 PM
+
+Lugar:
+Hacienda San Miguel
+Ciudad de México
+
+Botón elegante:
+“Ver ubicación”
+(Que abra Google Maps en nueva pestaña)
+
+4️⃣ Dress Code
+
+Fondo crema con detalle dorado.
+Texto:
+Formal Elegante
+
+5️⃣ Confirmación
+
+Botón grande:
+“Confirmar asistencia”
+
+(Solo visual, sin funcionalidad real todavía)
+
+6️⃣ Cuenta regresiva
+
+Agregar contador dinámico en JavaScript hacia la fecha del evento.
+
+Debe mostrar:
+Días / Horas / Minutos / Segundos
+
+Diseño minimalista y elegante.
+
+✨ Detalles adicionales
+
+Agregar pequeños efectos de pétalos cayendo suavemente en fondo (muy sutil).
+
+Agregar transiciones suaves entre secciones.
+
+Scroll suave.
+
+Botones con efecto hover elegante.
+
+Sombra sutil en tarjetas.
+
+Bordes ligeramente redondeados.
+
+Nada exagerado, todo elegante.
+
+📱 Responsive
+
+Debe verse perfecto en:
+
+Mobile
+
+Tablet
+
+Desktop
+
+El sobre debe adaptarse proporcionalmente.
+
+📦 Entrega
+
+Genera:
+
+index.html
+
+styles.css
+
+script.js
+
+Código limpio, organizado y comentado.
+
+No usar frameworks.
+Solo HTML, CSS y JavaScript puro.
+
+🔥 Resultado Esperado
+
+Cuando abras la página:
+
+Pantalla elegante
+
+Sobre en el centro
+
+Click
+
+Animación
+
+Música suave
+
+Invitación moderna con secciones animadas
+
+Experiencia emocional
