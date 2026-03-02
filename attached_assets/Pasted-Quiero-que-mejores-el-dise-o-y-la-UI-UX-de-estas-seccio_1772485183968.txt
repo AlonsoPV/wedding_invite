@@ -1,0 +1,83 @@
+Quiero que mejores el diseño y la UI/UX de estas secciones de mi invitación digital de boda: 
+1) “Nuestra Historia”
+2) “Detalles del Evento”
+3) “Dress Code”
+
+REQUISITOS GENERALES
+- Mantén el estilo: moderno, elegante, cinematográfico, premium.
+- Mobile-first, responsive (mobile/tablet/desktop).
+- No uses frameworks (solo HTML/CSS/JS).
+- Usa animaciones sutiles al hacer scroll (fade + translate + blur muy ligero).
+- Mucho aire/espaciado, cards con sombra suave, bordes redondeados, líneas finas doradas.
+- Tipografías: Playfair Display (títulos) + Poppins o Montserrat (texto).
+- Paleta sugerida:
+  - Fondo crema: #F8F4EF
+  - Dorado suave: #C6A75E
+  - Rosa empolvado: #D8A7B1
+  - Texto gris oscuro: #2B2B2B
+- Respeta prefers-reduced-motion (si está activo, desactiva animaciones fuertes).
+
+DATOS ACTUALIZADOS (usa estos en el contenido)
+- Nombres: Viviana & Carlos
+- Fecha: 07 de noviembre de 2026
+- Hora: 19:30
+- Lugar: Hotel Camino Real Polanco, Ciudad de México
+- Botón “Ver ubicación” debe abrir Google Maps en una nueva pestaña con búsqueda del lugar:
+  https://www.google.com/maps/search/?api=1&query=Hotel%20Camino%20Real%20Polanco%20Ciudad%20de%20M%C3%A9xico
+
+SECCIÓN 1: NUESTRA HISTORIA (MEJORAR)
+- Cambia a un bloque editorial tipo “cita” + texto corto.
+- Agrega detalle visual: línea dorada, ornamento minimalista (SVG inline o CSS).
+- Incluye un pequeño “momento clave” en bullets (3 bullets) con iconos minimalistas (corazón/anillo/estrella) en SVG inline.
+- Texto sugerido (puedes ajustarlo para que suene mejor, pero en español y romántico):
+  Título: “Nuestra Historia”
+  Texto: “Lo que comenzó con una conversación sencilla, se convirtió en un ‘sí’ para toda la vida. Hoy celebramos el camino que hemos construido juntos y el hogar que estamos creando.”
+  Bullets:
+   - “El día que supimos que era real”
+   - “El viaje que nos cambió”
+   - “El ‘sí’ que lo inició todo”
+
+SECCIÓN 2: DETALLES DEL EVENTO (MEJORAR)
+- Convertir en un bloque premium con 3–4 cards (grid responsive):
+  Card 1: Fecha (07 Nov 2026)
+  Card 2: Hora (19:30 hrs)
+  Card 3: Lugar (Hotel Camino Real Polanco)
+  Card 4 (opcional): Ciudad (Ciudad de México)
+- Cada card debe tener:
+  - Icono minimalista (SVG inline)
+  - Título pequeño (uppercase)
+  - Dato grande (serif)
+- Agrega un “timeline” mini debajo (muy elegante, no recargado):
+  - “Recepción” 19:30
+  - “Brindis” 20:30
+  - “Cena” 21:30
+  - “Fiesta” 23:00
+  (Solo UI, sin lógica.)
+- Botón “Ver ubicación” elegante (borde dorado + hover relleno dorado suave).
+- Incluir un microtexto debajo: “Te sugerimos llegar 15 minutos antes.”
+
+SECCIÓN 3: DRESS CODE (MEJORAR)
+- Diseña la sección como una tarjeta central con:
+  - Título: “Dress Code”
+  - Texto principal: “Formal Elegante”
+  - Subtexto: “Tonos sobrios y detalles sofisticados. Evita tenis.”
+- Agrega 2 chips/badges (píldoras):
+  - “Cocktail / Formal”
+  - “No white”
+- Agrega mini guía visual con 2 columnas (Hombres / Mujeres) con 2 bullets por columna.
+- Mantén todo muy minimal y premium.
+
+ANIMACIONES (AL SCROLL)
+- Implementa IntersectionObserver para agregar clase .is-visible a cada sección.
+- CSS: estado inicial con opacity:0, transform: translateY(12px), filter: blur(4px)
+- Al volverse visible: opacity:1, transform:none, filter:none con transition 700–900ms.
+
+ENTREGA
+- Actualiza el HTML y CSS correspondientes a estas secciones.
+- Si existe un archivo script.js, agrega ahí la lógica de IntersectionObserver.
+- Asegúrate de que todo se vea perfecto en móvil.
+- No rompas la estructura existente: reemplaza estas secciones manteniendo IDs/clases si ya existen; si no existen, créalas con clases semánticas:
+  .story-section, .details-section, .dresscode-section
+- Agrega comentarios en el código explicando cada parte.
+
+Al final, muéstrame el código actualizado (HTML + CSS + JS) listo para copiar y pegar.

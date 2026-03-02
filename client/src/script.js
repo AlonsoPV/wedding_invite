@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Disparar las animaciones de la portada
             setTimeout(() => {
-                const firstElements = invitationScreen.querySelectorAll('.cover .fade-up');
-                firstElements.forEach(el => el.classList.add('visible'));
+                const firstElements = invitationScreen.querySelectorAll('.cover .animate-on-scroll');
+                firstElements.forEach(el => el.classList.add('is-visible'));
             }, 100);
 
             // Inicializar el resto de componentes interactivos
@@ -61,30 +61,30 @@ document.addEventListener('DOMContentLoaded', () => {
         isMusicPlaying = !isMusicPlaying;
     });
 
-    // 3. Animaciones al hacer Scroll
+    // 3. Animaciones al hacer Scroll con IntersectionObserver
     function initScrollObserver() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    // Opcional: dejar de observar si solo queremos que se anime una vez
+                    entry.target.classList.add('is-visible');
+                    // Opcional: si queremos que la animación ocurra solo la primera vez, descomentamos:
                     // observer.unobserve(entry.target);
                 }
             });
         }, { 
-            threshold: 0.15, // Se activa cuando el 15% del elemento es visible
-            rootMargin: "0px 0px -50px 0px" // Margen para que se active un poco antes
+            threshold: 0.1, // Se activa cuando el 10% del elemento es visible
+            rootMargin: "0px 0px -50px 0px" // Margen para que se active justo antes de estar completamente en pantalla
         });
 
-        document.querySelectorAll('.fade-up').forEach(el => {
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
         });
     }
 
     // 4. Cuenta Regresiva Dinámica
     function initCountdown() {
-        // Fecha objetivo: 15 de Octubre de 2026, 17:00 HRS
-        const eventDate = new Date('October 15, 2026 17:00:00').getTime();
+        // Fecha objetivo: 07 de Noviembre de 2026, 19:30 HRS
+        const eventDate = new Date('November 07, 2026 19:30:00').getTime();
         
         const updateTimer = () => {
             const now = new Date().getTime();
