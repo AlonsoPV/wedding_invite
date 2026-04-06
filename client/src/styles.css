@@ -1465,27 +1465,114 @@ body::before {
 
 /* ===== Responsive Design (Mobile First adjustments) ===== */
 @media (max-width: 768px) {
+    #envelope-screen {
+        padding-top: 15vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .envelope-text {
+        font-size: 1.4rem;
+        margin-bottom: 8vh;
+        letter-spacing: 4px;
+        line-height: 1.4;
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .envelope-wrapper {
+        padding: 0;
+        margin: 0 auto;
+        /* Dimensiones reales recalculadas para mobile sin usar transform: scale */
+    }
+
     .envelope-body {
-        width: 310px;
-        height: 200px;
+        width: 320px;
+        height: 208px;
     }
-    .envelope-flap {
-        border-left: 155px solid transparent;
-        border-right: 155px solid transparent;
-        border-top: 120px solid #F5EFE6;
+    
+    .envelope-left {
+        border-top: 104px solid transparent;
+        border-bottom: 104px solid transparent;
+        border-left: 160px solid #f2eadb;
     }
-    .envelope-flap::after {
-        top: -120px;
-        left: -155px;
-        border-left: 155px solid transparent;
-        border-right: 155px solid transparent;
-        border-top: 120px solid rgba(255, 255, 255, 0.4);
+    
+    .envelope-right {
+        border-top: 104px solid transparent;
+        border-bottom: 104px solid transparent;
+        border-right: 160px solid #ede4d3;
     }
+
     .envelope-front {
-        border-left: 155px solid #F0E8D9;
-        border-right: 155px solid #EDE4D3;
-        border-bottom: 110px solid #EBE1CE;
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        border-bottom: 120px solid #fdfbf7;
     }
+    
+    .envelope-front::after {
+        top: 0; left: -160px;
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        border-bottom: 120px solid rgba(255,255,255,0.7);
+    }
+
+    .envelope-flap {
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        border-top: 132px solid #fdfbf7;
+    }
+    
+    .envelope-flap::after {
+        top: -132px;
+        left: -160px;
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        border-top: 132px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .envelope-flap::before {
+        top: -132px;
+        left: -158px;
+        border-left: 158px solid transparent;
+        border-right: 158px solid transparent;
+        border-top: 130px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .envelope-seal {
+        top: 128px;
+        width: 52px; height: 52px;
+    }
+    
+    .seal-inner {
+        width: 40px; height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .letter {
+        padding: 20px;
+        bottom: 6px; left: 10px; right: 10px; top: 10px;
+    }
+    
+    .letter h3 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    
+    .letter p {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+    
+    .letter::after {
+        bottom: 12px;
+    }
+
+    .envelope-wrapper.open .letter {
+        transform: translateY(-105px) translateZ(1px);
+    }
+
     .cover .title { font-size: 3.8rem; }
     .section-title { font-size: 2.2rem; }
     

@@ -1,0 +1,101 @@
+Quiero corregir y mejorar el diseño responsive de la entrada del sobre en mobile, porque actualmente el diseño se rompe y pierde totalmente la elegancia visual.
+
+PROBLEMA
+En versión móvil:
+- el sobre se ve desproporcionado
+- la composición se rompe
+- los pliegues y la tarjeta se salen de lugar
+- el texto y el sobre no guardan una relación visual armónica
+- se pierde la sensación premium y editorial
+
+OBJETIVO
+Hacer que la entrada del sobre se vea bien diseñada también en mobile, manteniendo la animación y la estética elegante de invitación premium.
+
+IMPORTANTE
+- No romper la lógica actual de animación si ya funciona
+- Ajustar layout, escalado, proporciones, posiciones y spacing específicamente para mobile
+- Priorizar composición visual y legibilidad
+- Debe sentirse como una experiencia cuidada, no como una adaptación forzada
+
+CAMBIOS A IMPLEMENTAR
+
+1. REPLANTEAR LA COMPOSICIÓN EN MOBILE
+No solo escalar el diseño de desktop.
+Necesito una composición específica para pantallas móviles.
+
+Aplicar:
+- reacomodar verticalmente el contenido
+- mejorar la relación entre título y sobre
+- asegurar que el sobre tenga un tamaño correcto respecto al viewport
+- evitar que el sobre ocupe demasiado o demasiado poco espacio
+
+2. AJUSTAR TAMAÑO Y PROPORCIÓN DEL SOBRE
+En mobile, el sobre debe:
+- escalar correctamente
+- mantener sus proporciones
+- no verse aplastado ni gigante
+- no cortar ninguna parte importante
+- mantenerse centrado visualmente
+
+3. CORREGIR POSICIÓN DE LOS PLIEGUES Y LA TARJETA
+Revisar en mobile:
+- posición de la tapa superior
+- posición de la parte frontal
+- salida de la tarjeta
+- ubicación del sello central
+
+Todo debe quedar alineado y limpio durante la animación.
+
+4. MEJORAR EL ESPACIADO SUPERIOR
+Ahora hay demasiado vacío arriba y la composición no se siente bien equilibrada.
+
+Ajustar:
+- separación entre el texto “Tienes una invitación” y el sobre
+- padding superior e inferior
+- balance general de la pantalla
+
+5. MEJORAR EL TÍTULO EN MOBILE
+El texto debe adaptarse mejor a pantallas pequeñas.
+
+Aplicar:
+- mejor tamaño responsivo
+- mejor line-height
+- mejor espaciado entre letras si hace falta
+- centrarlo correctamente
+- evitar que se vea demasiado alto o separado del sobre
+
+6. HACER UNA VERSIÓN MOBILE REAL, NO SOLO ESCALADA
+Necesito que esta sección tenga reglas específicas para mobile:
+- media queries bien trabajadas
+- posiciones recalculadas
+- tamaños ajustados
+- mejor composición vertical
+
+No quiero solo un scale general del diseño desktop.
+
+7. MANTENER LA SENSACIÓN PREMIUM
+Aunque cambie la composición, en mobile debe seguir sintiéndose:
+- elegante
+- delicada
+- minimalista
+- editorial
+- coherente con una invitación digital de boda
+
+8. REVISAR SOMBRAS Y PROFUNDIDAD EN MOBILE
+En pantallas pequeñas:
+- las sombras pueden verse demasiado grandes o mal ubicadas
+- el glow y la profundidad deben ajustarse para no ensuciar la vista
+
+Adaptar sombras y profundidad para mobile.
+
+9. RESULTADO ESPERADO
+En mobile:
+- el sobre debe verse bien proporcionado
+- la animación debe seguir viéndose limpia
+- la composición debe sentirse intencional
+- el diseño no debe romperse
+- la experiencia debe seguir siendo premium
+
+IMPORTANTE FINAL
+Quiero una optimización real para mobile, no solo una reducción del diseño de desktop.
+La entrada del sobre debe tener su propia lógica responsiva para verse elegante en pantallas pequeñas.
