@@ -9,6 +9,7 @@
     
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Poppins', sans-serif;
+    --font-script: 'Pinyon Script', cursive;
 }
 
 /* ===== Global Reset ===== */
@@ -858,91 +859,213 @@ body::before {
 }
 
 
-/* ===== 4. Dress Code (Beige) ===== */
+/* ===== 4. Dress Code & Outfit Inspo ===== */
 .dresscode-section {
-    padding: 140px 20px;
-}
-
-.dresscode-card {
-    background: var(--ivory);
-    border-radius: 16px;
-    padding: 60px 40px;
-    box-shadow: 0 10px 50px rgba(19, 49, 19, 0.05);
+    padding: 120px 20px;
+    text-align: center;
+    color: var(--ivory);
     position: relative;
-    overflow: hidden;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid rgba(198, 167, 94, 0.2);
 }
 
-.dress-main {
-    font-size: 2.8rem;
-    font-family: var(--font-serif);
-    color: var(--green-main);
-    margin-bottom: 10px;
-}
-
-.dress-sub {
-    font-size: 1rem;
-    color: var(--green-sec);
-    opacity: 0.8;
-    margin-bottom: 30px;
-}
-
-.dress-chips {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.dc-header {
     margin-bottom: 40px;
-    flex-wrap: wrap;
 }
 
-.chip {
-    padding: 8px 20px;
-    background: var(--bg-beige);
-    border: 1px solid rgba(198, 167, 94, 0.4);
-    border-radius: 40px;
-    font-size: 0.85rem;
+.dc-script {
+    font-family: var(--font-script);
+    font-size: 4rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: -15px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.dc-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--green-main);
+    font-weight: 300;
+    color: var(--ivory);
 }
 
-.dress-guide {
+/* Illustrations */
+.dc-illustrations {
     display: flex;
     justify-content: center;
-    gap: 60px;
-    border-top: 1px solid rgba(198, 167, 94, 0.2);
-    padding-top: 30px;
+    gap: 50px;
+    margin-bottom: 40px;
 }
 
-.guide-col h5 {
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    color: var(--green-main);
-    margin-bottom: 15px;
+.dc-illus-item {
+    width: 50px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.guide-col ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
+.dc-icon {
+    width: 100%;
+    height: 100%;
+    stroke: var(--gold);
 }
 
-.guide-col li {
-    font-size: 0.9rem;
-    color: var(--green-sec);
-    opacity: 0.9;
+/* Text Description */
+.dc-description {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 60px;
+    color: var(--ivory);
+    letter-spacing: 1px;
+}
+
+.dc-description p {
     margin-bottom: 8px;
-    position: relative;
-    padding-left: 15px;
 }
 
-.guide-col li::before {
-    content: "•";
+.dc-gender {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--gold);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Center Divider */
+.center-divider {
+    margin: 0 auto 80px auto;
+    width: 60px;
+    height: 1px;
+    background-color: var(--gold);
+    opacity: 0.5;
+}
+
+/* Outfit Inspo Section */
+.inspo-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inspo-header {
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.inspo-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--ivory);
+}
+
+.inspo-script {
+    font-family: var(--font-script);
+    font-size: 3.5rem;
     color: var(--gold);
     position: absolute;
-    left: 0;
+    top: 10px;
+    right: -30px;
+    line-height: 1;
+}
+
+.inspo-intro {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: rgba(248, 246, 242, 0.8);
+    max-width: 450px;
+    margin: 0 auto 50px auto;
+    line-height: 1.8;
+}
+
+/* Inspiration Board */
+.inspo-board {
+    background-color: var(--ivory);
+    border-radius: 4px;
+    padding: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    transform: rotate(-1deg);
+    transition: transform 0.4s ease;
+}
+
+.inspo-board:hover {
+    transform: rotate(0deg);
+}
+
+.inspo-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 8px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.inspo-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.8s ease;
+}
+
+.inspo-board:hover .inspo-img {
+    transform: scale(1.03);
+}
+
+/* Placeholder background colors/images for the grid items */
+.img-1 { 
+    background-color: #e3d5c8; 
+    grid-row: 1 / 3;
+    background-image: url('https://images.unsplash.com/photo-1594552072238-1616c04f938f?q=80&w=800&auto=format&fit=crop');
+} 
+.img-2 { 
+    background-color: #d1d5db; 
+    background-image: url('https://images.unsplash.com/photo-1550005809-91ad75fb315f?q=80&w=800&auto=format&fit=crop');
+}
+.img-3 { 
+    background-color: #a3b19b; 
+    background-image: url('https://images.unsplash.com/photo-1594552071981-d14c2b9a7ce3?q=80&w=800&auto=format&fit=crop');
+}
+.img-4 { display: none; } 
+
+.inspo-caption {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Button */
+.inspo-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 0;
+}
+
+.inspo-btn:hover {
+    background-color: var(--gold);
+    color: var(--green-main);
 }
 
 
@@ -1631,20 +1754,40 @@ body::before {
         text-align: left;
     }
 
-    .dress-guide {
-        flex-direction: column;
+    .dc-script {
+        font-size: 3rem;
+    }
+    
+    .dc-title {
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+    }
+    
+    .dc-illustrations {
         gap: 30px;
-        text-align: center;
     }
-    .guide-col ul {
-        text-align: center;
+    
+    .dc-illus-item {
+        width: 40px;
+        height: 80px;
     }
-    .guide-col li {
-        padding-left: 0;
+    
+    .inspo-script {
+        font-size: 2.8rem;
+        right: -20px;
     }
-    .guide-col li::before {
-        display: none;
+    
+    .inspo-title {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
     }
+    
+    .inspo-grid {
+        grid-template-rows: 160px 160px;
+        grid-template-columns: 1fr;
+    }
+    
+    .img-1 { grid-row: auto; } /* Reset spanning for mobile */
 
     .timer { gap: 15px; flex-wrap: wrap; }
     .time-block span { font-size: 2.5rem; }

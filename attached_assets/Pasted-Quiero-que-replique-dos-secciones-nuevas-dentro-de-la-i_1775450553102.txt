@@ -1,0 +1,142 @@
+Quiero que replique dos secciones nuevas dentro de la invitación digital, inspiradas visualmente en las referencias que adjunto. No quiero una copia exacta, pero sí una interpretación muy cercana en estilo, composición y jerarquía visual.
+
+OBJETIVO
+Agregar dos secciones nuevas con estética de boda premium:
+1. Dress Code
+2. Outfit Inspo
+
+Deben sentirse:
+- editoriales
+- elegantes
+- románticas
+- limpias
+- premium
+- muy bien diseñadas para mobile
+
+IMPORTANTE
+- Mantener coherencia con el resto de la invitación
+- Priorizar diseño mobile-first
+- No hacerlo tipo app ni dashboard
+- Debe verse como invitación digital de lujo
+- Respetar el estilo visual de las referencias: fondo verde suave, tipografía elegante, mucho aire, composición centrada
+
+PALETA / ESTILO VISUAL
+Usar una estética similar a la referencia:
+- fondo verde suave / sage green
+- texto blanco o marfil
+- tipografía serif elegante para títulos
+- tipografía script/caligrafía para palabras decorativas
+- líneas finas decorativas
+- composición centrada
+- mucho espacio en blanco
+- sensación editorial y femenina
+
+SECCIÓN 1 — DRESS CODE
+
+Quiero una sección tipo portada editorial con esta estructura:
+
+1. Título principal en dos estilos tipográficos:
+- una palabra en script/caligrafía grande:
+  “Dress Code”
+- debajo, en serif elegante y mayúsculas:
+  “RIGUROSA ETIQUETA”
+
+2. Ilustraciones / íconos lineales
+Debajo del título:
+- un vestido largo femenino lineal
+- un traje masculino lineal
+Ambos centrados y con estilo minimalista, finos y elegantes
+
+3. Texto descriptivo
+Debajo:
+- “Mujeres: Vestido Largo de Noche”
+- “Hombres: Traje Completo Formal”
+
+Aplicar jerarquía tipográfica:
+- “Mujeres:” y “Hombres:” en serif italic o negrita elegante
+- el resto del texto más ligero
+
+4. Divider decorativo
+Agregar una línea fina horizontal elegante antes de pasar a la siguiente subsección
+
+SECCIÓN 2 — OUTFIT INSPO
+
+Debajo de Dress Code, quiero una sección tipo editorial/pinterest con esta estructura:
+
+1. Título en dos estilos:
+- palabra superior en serif elegante:
+  “OUTFIT”
+- palabra superpuesta o debajo en script:
+  “Inspo”
+
+Debe verse muy similar en espíritu a la referencia: femenino, aspiracional y elegante
+
+2. Texto introductorio
+Debajo:
+“Te compartimos nuestro outfit inspo para que tomes ideas para el gran día”
+
+3. Tarjeta / bloque visual de inspiración
+Crear una tarjeta centrada que simule una previsualización tipo moodboard o Pinterest board.
+
+Debe incluir:
+- fondo blanco o marfil
+- esquinas suaves
+- sombra muy sutil
+- una cuadrícula de imágenes de ejemplo
+- texto inferior estilo preview
+
+No hace falta conectar Pinterest real por ahora; puede ser un bloque visual editable.
+
+IMPORTANTE:
+Este bloque debe poder reemplazarse fácilmente después por:
+- una imagen mock
+- o un embed / screenshot
+- o un enlace externo
+
+Agregar también un botón o enlace opcional debajo o sobre la tarjeta:
+“Ver inspiración”
+
+DISEÑO Y COMPOSICIÓN
+Quiero que ambas secciones se vean:
+- muy centradas
+- aireadas
+- delicadas
+- elegantes
+- con ritmo visual
+
+Usar:
+- márgenes amplios
+- buena separación entre elementos
+- títulos grandes pero balanceados
+- tipografía con mucha intención
+
+RESPONSIVE
+Muy importante:
+- Debe verse excelente en mobile
+- Todo centrado
+- Tipografías escalables
+- Ilustraciones proporcionadas
+- Tarjeta de outfit inspo bien contenida
+- No debe desbordarse ni romperse
+
+DETALLES VISUALES
+Agregar:
+- una línea decorativa fina entre subsecciones
+- espaciado vertical generoso
+- posibles pequeños detalles sutiles (ornamentos mínimos)
+- nada exagerado
+
+NO HACER
+- no hacerlo corporativo
+- no hacerlo tech
+- no usar cards pesadas
+- no meter demasiados colores
+- no usar una UI genérica
+
+RESULTADO ESPERADO
+Quiero dos secciones que se sientan como parte de una invitación de boda premium:
+- “Dress Code”
+- “Outfit Inspo”
+
+Deben verse muy similares en espíritu a las imágenes de referencia:
+sofisticadas, románticas, limpias y muy bien resueltas en mobile.
