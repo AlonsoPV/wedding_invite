@@ -1,0 +1,133 @@
+Quiero rediseñar la sección “Detalles del Evento” para que se sienta como una experiencia digital de boda de lujo. No quiero que se vea como dashboard ni como app. Debe sentirse editorial, elegante, romántica y premium.
+
+OBJETIVO
+- Convertir la sección en una experiencia visual más aspiracional
+- Añadir interactividad sutil
+- Incorporar scroll reveal y animación en la línea del tiempo
+- Mantenerla limpia, refinada y muy estética
+
+ESTILO GENERAL
+- Inspiración: invitación digital premium / boda de lujo / editorial elegante
+- Sensación: delicadeza, sofisticación, calma, ceremonia
+- Evitar look tech o excesivamente moderno tipo SaaS
+- Priorizar tipografía, espacio, composición y movimiento sutil
+
+ESTRUCTURA
+Mantener esta estructura:
+
+1. Título:
+   “Detalles del Evento”
+
+2. Tres bloques principales únicamente:
+   - Fecha
+   - Hora
+   - Lugar
+
+3. Línea del tiempo del evento
+4. Texto breve de recomendación
+5. Botón “Ver ubicación”
+
+DISEÑO DE LOS 3 BLOQUES
+- Solo dejar: Fecha, Hora y Lugar
+- En desktop deben ir en horizontal, centrados, con separación elegante
+- En mobile se apilan verticalmente
+- Cada bloque debe verse como una tarjeta premium muy ligera:
+  - fondo translúcido o marfil/verde muy sutil según la paleta
+  - borde fino
+  - padding amplio
+  - esquinas suaves
+  - ícono minimalista
+  - etiqueta pequeña arriba
+  - valor principal con tipografía elegante
+
+TIMELINE — ESTILO BODA DE LUJO
+Reemplazar completamente el timeline actual por uno editorial y refinado.
+
+Diseño:
+- Una línea central delgada
+- Puntos elegantes circulares
+- Cada punto representa una etapa:
+  - 19:30 — Recepción
+  - 20:30 — Brindis
+  - 21:30 — Cena
+  - 23:00 — Fiesta
+
+Presentación visual:
+- hora pequeña
+- punto central
+- evento debajo
+- la línea debe ser muy fina y elegante
+- el punto activo puede tener un glow o halo suave
+
+INTERACTIVIDAD Y ANIMACIÓN
+Quiero que esta sección tenga vida, pero de manera sutil y elegante.
+
+1. Scroll reveal
+- El título aparece primero con fade-up
+- Después entran las 3 tarjetas con stagger animation
+- Después la línea del tiempo se dibuja suavemente
+- Luego aparecen los puntos uno por uno
+
+2. Animación del timeline
+- La línea se “traza” al entrar en viewport
+- Los puntos aparecen secuencialmente
+- Cada punto puede tener una microanimación tipo pulse muy leve
+
+3. Hover en puntos
+- Al pasar el mouse sobre cada punto:
+  - el punto se ilumina suavemente
+  - el evento gana énfasis
+  - puede aparecer una pequeña etiqueta flotante o simplemente cambiar de opacidad
+
+4. Microanimación ambiental
+- Si existe fondo decorativo (textura, hojas, partículas), usar movimiento casi imperceptible
+- Nada exagerado
+
+LOOK “BODA DE LUJO”
+Quiero que la sección transmita:
+- ceremonia
+- exclusividad
+- elegancia
+- romanticismo sutil
+- atención al detalle
+
+Puedes ayudarte con:
+- tipografía serif elegante para títulos
+- tipografía limpia para labels
+- divisores finos decorativos
+- acentos dorados o verde suave elegante
+- fondo con textura ligera o floral muy tenue
+- desenfoques suaves
+
+DETALLES ADICIONALES
+Debajo del timeline:
+- texto pequeño:
+  “Te sugerimos llegar 15 minutos antes.”
+
+Botón:
+- “Ver ubicación”
+- estilo outline premium
+- bordes finos
+- hover elegante
+- centrado
+
+RESPONSIVE
+En mobile:
+- tarjetas en columna
+- timeline puede mantenerse horizontal con scroll suave o adaptarse a vertical
+- mantener la misma sensación premium
+
+ANIMACIONES / UX
+- Usa IntersectionObserver para activar reveal al entrar en viewport
+- Usa transiciones suaves
+- Respetar prefers-reduced-motion
+
+IMPORTANTE
+- No usar efectos exagerados
+- No hacerlo parecer app
+- No recargarlo
+- Todo debe sentirse editorial, limpio y lujoso
+
+RESULTADO ESPERADO
+La sección debe verse como una experiencia de boda premium y no como una simple sección informativa.
+Debe sentirse cuidadosamente diseñada, elegante y memorable.
