@@ -1,0 +1,90 @@
+Quiero mejorar la transición visual entre secciones de la página, no desde animación compleja, sino desde diseño. Actualmente los cambios entre secciones se sienten bruscos y cortados.
+
+OBJETIVO
+- Hacer que el paso entre secciones se sienta fluido, natural y elegante
+- Crear continuidad visual en toda la página
+- Elevar la experiencia a un nivel más editorial y premium
+
+IMPORTANTE
+- No quiero animaciones exageradas
+- No quiero efectos pesados
+- Priorizar diseño, composición y continuidad visual
+- Si hay animaciones, deben ser muy sutiles
+
+CAMBIOS A IMPLEMENTAR
+
+1. TRANSICIÓN POR FONDOS
+Evitar cambios abruptos de fondo entre secciones.
+
+Aplicar:
+- degradados suaves entre secciones
+- transición progresiva de color (no cortes duros)
+- uso de capas o overlays para conectar visualmente una sección con otra
+
+Ejemplo:
+- una sección puede “desvanecerse” en la siguiente con un gradient
+- usar blur o fade muy ligero entre bloques
+
+2. SEPARADORES ELEGANTES
+Agregar divisores visuales sutiles entre secciones:
+
+Opciones:
+- líneas finas
+- detalles dorados
+- elementos decorativos muy sutiles
+- formas orgánicas suaves (curvas, waves muy delicadas)
+
+Evitar:
+- líneas gruesas
+- separadores agresivos
+
+3. CONTINUIDAD DE ELEMENTOS
+Algunos elementos deben “conectar” secciones:
+
+Ejemplo:
+- una línea, patrón o textura que continúe
+- una forma que se transforme entre secciones
+- mantener coherencia en spacing y ritmo visual
+
+4. ESPACIADO COMO TRANSICIÓN
+Aumentar el espacio entre secciones para dar respiración:
+
+- más padding vertical
+- evitar que las secciones se sientan pegadas
+- crear ritmo visual (como páginas editoriales)
+
+5. CAMBIO DE TONO GRADUAL
+Si cambian colores entre secciones:
+
+- hacerlo progresivo
+- no pasar de oscuro a claro de forma brusca
+- usar capas intermedias o transiciones suaves
+
+6. MICRO TRANSICIONES SUTILES (OPCIONAL)
+Si se usa animación:
+- fade-in ligero al hacer scroll
+- reveal muy suave
+- nada de efectos bruscos o rápidos
+
+Usar:
+- IntersectionObserver
+- animaciones cortas y elegantes
+
+7. CONSISTENCIA VISUAL
+Mantener coherencia en:
+- tipografía
+- colores
+- estilo de componentes
+- ritmo visual
+
+Toda la página debe sentirse como una sola pieza, no bloques independientes.
+
+RESULTADO ESPERADO
+- La navegación vertical debe sentirse fluida
+- Las secciones deben conectarse visualmente
+- La página debe parecer una experiencia continua
+- Sensación premium, elegante y bien diseñada
+
+IMPORTANTE FINAL
+Priorizar diseño sobre animación.
+La transición debe sentirse natural incluso si no hubiera animación.
