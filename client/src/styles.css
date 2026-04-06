@@ -387,126 +387,29 @@ body::before {
 
 /* ===== Invitation Sections ===== */
 .section {
-    padding: 180px 20px; /* Increased vertical padding for more breathing room */
+    padding: 120px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 100vh;
-    position: relative; /* Added for positioning overlays */
-}
-
-/* Base Overlays for smooth background transitions */
-.section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 150px;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.section::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 150px;
-    pointer-events: none;
-    z-index: 1;
 }
 
 .container {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    position: relative;
-    z-index: 2; /* Keep content above overlays */
 }
 
-/* Section Backgrounds & Transitions */
+/* Section Backgrounds */
 .bg-beige { 
     background-color: var(--bg-beige); 
     color: var(--green-main);
 }
-/* Beige to Green transition */
-.bg-beige + .bg-green {
-    position: relative;
-    padding-top: 220px; /* Add extra padding to account for the transition */
-}
-.bg-beige + .bg-green::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 150px;
-    background: linear-gradient(to bottom, var(--bg-beige) 0%, var(--green-main) 100%);
-    z-index: 0;
-}
-
-/* Green to Beige transition */
-.bg-green + .bg-beige {
-    position: relative;
-    padding-top: 220px;
-}
-.bg-green + .bg-beige::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 150px;
-    background: linear-gradient(to bottom, var(--green-main) 0%, var(--bg-beige) 100%);
-    z-index: 0;
-}
-
-/* Beige to Beige separator (subtle line) */
-.bg-beige + .bg-beige {
-    position: relative;
-    padding-top: 180px;
-}
-.bg-beige + .bg-beige::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 150px; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(198, 167, 94, 0.4), transparent);
-    z-index: 0;
-}
-.bg-beige + .bg-beige::after {
-    content: '✦';
-    position: absolute;
-    top: -10px; left: 50%;
-    transform: translateX(-50%);
-    color: rgba(198, 167, 94, 0.5);
-    font-size: 14px;
-    background-color: var(--bg-beige);
-    padding: 0 20px;
-    z-index: 1;
-    line-height: 20px;
-}
-
-/* Green to Green separator (subtle line) */
-.bg-green + .bg-green {
-    position: relative;
-    padding-top: 180px;
-}
-.bg-green + .bg-green::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 150px; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(198, 167, 94, 0.4), transparent);
-    z-index: 0;
-}
-.bg-green + .bg-green::after {
-    content: '✦';
-    position: absolute;
-    top: -10px; left: 50%;
-    transform: translateX(-50%);
-    color: rgba(198, 167, 94, 0.5);
-    font-size: 14px;
-    background-color: var(--green-main);
-    padding: 0 20px;
-    z-index: 1;
-    line-height: 20px;
+.bg-green { 
+    background-color: var(--green-main); 
+    color: var(--ivory);
 }
 
 /* Typography Formatting */
@@ -569,9 +472,9 @@ body::before {
 /* ===== Scroll Animations ===== */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    filter: blur(8px);
-    transition: opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1), transform 1200ms cubic-bezier(0.22, 1, 0.36, 1), filter 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(12px);
+    filter: blur(4px);
+    transition: opacity 800ms ease-out, transform 800ms ease-out, filter 800ms ease-out;
     will-change: opacity, transform, filter;
 }
 
@@ -595,9 +498,9 @@ body::before {
 .delay-3 { transition-delay: 450ms; }
 .delay-4 { transition-delay: 600ms; }
 
-/* Story Section specific adjustments */
+/* ===== 2. Story Section (Beige) ===== */
 .story-section {
-    padding: 180px 20px;
+    padding: 140px 20px;
 }
 
 .story-container {
@@ -663,9 +566,9 @@ body::before {
 }
 
 
-/* Details Section specific adjustments */
+/* ===== 3. Details Section (Green) ===== */
 .details-section {
-    padding: 180px 20px;
+    padding: 160px 20px;
 }
 
 .section-heading {
@@ -955,9 +858,9 @@ body::before {
 }
 
 
-/* Dress Code Section specific adjustments */
+/* ===== 4. Dress Code (Beige) ===== */
 .dresscode-section {
-    padding: 180px 20px;
+    padding: 140px 20px;
 }
 
 .dresscode-card {
@@ -1043,9 +946,9 @@ body::before {
 }
 
 
-/* Gifts Section specific adjustments */
+/* ===== Gifts Section (Beige) ===== */
 .gifts-section {
-    padding: 180px 20px;
+    padding: 140px 20px;
 }
 
 .gifts-grid {
@@ -1189,9 +1092,9 @@ body::before {
     margin-top: auto;
 }
 
-/* Guestbook Section specific adjustments */
+/* ===== Guestbook Section (Beige) ===== */
 .guestbook-section {
-    padding: 180px 20px;
+    padding: 140px 20px;
 }
 
 .guestbook-container {
