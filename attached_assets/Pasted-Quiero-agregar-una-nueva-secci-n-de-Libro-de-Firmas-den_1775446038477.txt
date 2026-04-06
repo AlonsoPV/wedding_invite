@@ -1,0 +1,110 @@
+Quiero agregar una nueva sección de “Libro de Firmas” dentro de la invitación digital, manteniendo el mismo estilo visual elegante, editorial y premium del resto del sitio.
+
+OBJETIVO
+- Crear un espacio donde los invitados puedan dejar un mensaje especial para los novios
+- Hacer que la experiencia se sienta emocional, íntima y memorable
+- Mantener un diseño sofisticado, limpio y fácil de usar
+
+TÍTULO DE LA SECCIÓN
+“Libro de Firmas”
+
+SUBTÍTULO / TEXTO INTRODUCTORIO
+Agregar un texto breve, cálido y elegante como este:
+
+“Nos haría muy felices recibir unas palabras tuyas y guardar este recuerdo para siempre.”
+
+También puedes usar una variante:
+“Déjanos un mensaje, un deseo o unas palabras que nos acompañen en este día tan especial.”
+
+ESTRUCTURA DE LA SECCIÓN
+La sección debe incluir:
+
+1. Encabezado elegante
+- título
+- subtítulo
+- un pequeño detalle decorativo (línea fina, ornamento o divisor sutil)
+
+2. Formulario para dejar mensaje
+Campos sugeridos:
+- Nombre
+- Mensaje
+
+Opcionales:
+- Relación con los novios
+- ¿Asistirás? (sí / no)
+
+Botón principal:
+“Dejar mensaje”
+
+3. Área para mostrar mensajes ya enviados
+Debajo del formulario, mostrar un muro o lista de mensajes con estilo elegante.
+
+Cada mensaje debe mostrar:
+- nombre
+- mensaje
+- opcionalmente fecha o un pequeño detalle visual
+
+DISEÑO
+Quiero que esta sección se vea:
+- elegante
+- emocional
+- romántica
+- premium
+- cálida
+
+Evitar completamente:
+- look de red social
+- estilo app genérica
+- cajas pesadas o muy técnicas
+
+Aplicar:
+- mucho espacio en blanco
+- tipografía refinada
+- cards suaves o bloques ligeros
+- bordes finos
+- fondos sutiles
+- buena jerarquía visual
+
+COMPOSICIÓN
+En desktop:
+- formulario arriba o a la izquierda
+- mensajes abajo o a la derecha, dependiendo del layout
+
+En mobile:
+- formulario primero
+- mensajes después
+- espaciado cómodo y legible
+
+INTERACCIÓN
+Quiero una experiencia suave y agradable:
+
+- Reveal on scroll para entrada de la sección
+- Hover muy sutil en los mensajes
+- Botón con transición elegante
+- Al enviar mensaje, mostrar feedback visual:
+  “Gracias por dejarnos tus palabras 💛”
+
+Si no hay backend, simularlo visualmente por ahora con frontend bien estructurado.
+
+ESTILO DE LOS MENSAJES
+Los mensajes deben verse como recuerdos o notas especiales, no como comentarios comunes.
+
+Ideas visuales:
+- tarjetas suaves estilo notas elegantes
+- bloques tipo papel premium / carta
+- diseño limpio y delicado
+
+RESPONSIVE
+- Todo debe verse perfecto en móvil
+- Campos amplios y cómodos
+- Mensajes fáciles de leer
+- Botón bien proporcionado
+
+IMPORTANTE
+- Mantener coherencia total con la estética de boda de lujo
+- No hacerlo parecer un formulario corporativo
+- No recargarlo
+- Debe sentirse íntimo, bello y memorable
+
+RESULTADO ESPERADO
+La sección de Libro de Firmas debe sentirse como un espacio emocional dentro de la invitación, donde los invitados puedan dejar un recuerdo especial con una experiencia visual elegante y cálida.

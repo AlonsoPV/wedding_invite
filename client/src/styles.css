@@ -900,7 +900,215 @@ body::before {
     margin-top: auto;
 }
 
-/* ===== 6. Countdown (Green) ===== */
+/* ===== Guestbook Section (Beige) ===== */
+.guestbook-section {
+    padding: 140px 20px;
+}
+
+.guestbook-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Formulario */
+.gb-form-wrapper {
+    flex: 1;
+    background: var(--ivory);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(198, 167, 94, 0.2);
+    box-shadow: 0 10px 40px rgba(19, 49, 19, 0.03);
+}
+
+.gb-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.gb-input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.gb-input-group label {
+    font-family: var(--font-serif);
+    color: var(--green-main);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.gb-input-group input,
+.gb-input-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid rgba(198, 167, 94, 0.3);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--green-sec);
+    transition: all 0.3s ease;
+}
+
+.gb-input-group input:focus,
+.gb-input-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(198, 167, 94, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.gb-input-group input::placeholder,
+.gb-input-group textarea::placeholder {
+    color: rgba(15, 44, 26, 0.3);
+    font-weight: 300;
+}
+
+.btn-guestbook {
+    padding: 16px 30px;
+    background: var(--green-main);
+    color: var(--ivory);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+}
+
+.btn-guestbook:hover {
+    background: var(--green-sec);
+    box-shadow: 0 8px 20px rgba(19, 49, 19, 0.15);
+    transform: translateY(-2px);
+}
+
+.gb-success-msg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--ivory);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 10;
+}
+
+.gb-success-msg.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.gb-success-msg svg {
+    width: 40px; height: 40px;
+    color: var(--gold);
+}
+
+.gb-success-msg span {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--green-main);
+    text-align: center;
+}
+
+/* Muro de mensajes */
+.gb-messages-wrapper {
+    flex: 1.2;
+    position: relative;
+}
+
+.gb-messages-scroll {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Custom Scrollbar for messages */
+.gb-messages-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.gb-messages-scroll::-webkit-scrollbar-track {
+    background: rgba(198, 167, 94, 0.1);
+    border-radius: 4px;
+}
+.gb-messages-scroll::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+}
+
+.gb-message-card {
+    background: rgba(248, 246, 242, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 2px solid var(--gold);
+    text-align: left;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gb-message-card:hover {
+    transform: translateX(5px);
+    background: var(--ivory);
+    box-shadow: 0 5px 15px rgba(19, 49, 19, 0.05);
+}
+
+.gb-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.gb-author {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--green-main);
+}
+
+.gb-date {
+    font-size: 0.75rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gb-text {
+    font-size: 0.95rem;
+    color: var(--green-sec);
+    line-height: 1.7;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@media (max-width: 850px) {
+    .guestbook-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .gb-form-wrapper, .gb-messages-wrapper {
+        width: 100%;
+        flex: none;
+    }
+    .gb-messages-scroll {
+        max-height: 400px;
+    }
+}
+
+/* ===== 7. Countdown (Green) ===== */
 .timer {
     display: flex;
     justify-content: center;

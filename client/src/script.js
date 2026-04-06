@@ -162,7 +162,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. Botón de Confirmación (RSVP)
+    // 7. Lógica del Libro de Firmas (Frontend only mockup)
+    const gbForm = document.getElementById('gb-form');
+    const gbSuccess = document.getElementById('gb-success');
+    const gbMessagesList = document.getElementById('gb-messages-list');
+    
+    if (gbForm) {
+        gbForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evitar recarga de página
+            
+            const nameInput = document.getElementById('gb-name');
+            const msgInput = document.getElementById('gb-message');
+            
+            if(nameInput.value.trim() && msgInput.value.trim()) {
+                // 1. Mostrar feedback de éxito
+                gbSuccess.classList.add('active');
+                
+                // 2. Crear nueva tarjeta de mensaje (Mockup visual)
+                const newCard = document.createElement('div');
+                newCard.className = 'gb-message-card';
+                // Añadir animación de entrada
+                newCard.style.opacity = '0';
+                newCard.style.transform = 'translateY(-20px)';
+                newCard.style.transition = 'all 0.5s ease';
+                
+                newCard.innerHTML = `
+                    <div class="gb-card-header">
+                        <span class="gb-author">${nameInput.value}</span>
+                        <span class="gb-date">Hace un momento</span>
+                    </div>
+                    <p class="gb-text">${msgInput.value}</p>
+                `;
+                
+                // Insertar al principio de la lista
+                gbMessagesList.insertBefore(newCard, gbMessagesList.firstChild);
+                
+                // Animar la tarjeta nueva
+                setTimeout(() => {
+                    newCard.style.opacity = '1';
+                    newCard.style.transform = 'translateY(0)';
+                }, 50);
+
+                // 3. Resetear formulario y ocultar success tras unos segundos
+                setTimeout(() => {
+                    gbSuccess.classList.remove('active');
+                    gbForm.reset();
+                }, 3000);
+            }
+        });
+    }
+
+    // 8. Botón de Confirmación (RSVP)
     if (rsvpBtn) {
         rsvpBtn.addEventListener('click', () => {
             alert('¡Gracias por tu interés! La funcionalidad de confirmación de asistencia estará disponible pronto.');

@@ -1,0 +1,127 @@
+Quiero mejorar el diseño visual del sobre de la invitación, pero sin romper ni reemplazar las animaciones actuales. La apertura, movimiento y transición ya funcionan; lo que necesito es elevar la estética para que el sobre se vea más premium, más elegante y más realista.
+
+OBJETIVO
+- Mejorar el diseño del sobre
+- Mantener las animaciones y movimientos actuales
+- Hacer que se sienta como una invitación de boda de lujo
+- Darle más profundidad, detalle y realismo visual
+
+IMPORTANTE
+- NO eliminar ni rehacer la animación principal si ya funciona
+- NO cambiar la lógica de apertura si no es necesario
+- Solo refinar el diseño visual, materiales, sombras, proporciones y acabados
+- Mantener una experiencia limpia, elegante y minimalista
+
+MEJORAS QUE QUIERO
+
+1. HACER EL SOBRE MÁS REALISTA Y PREMIUM
+Actualmente el sobre se ve funcional, pero algo plano.
+
+Mejorar:
+- proporciones del sobre
+- pliegues más elegantes
+- sombras más suaves y realistas
+- sensación de papel premium
+- más profundidad entre tapa, cuerpo del sobre y tarjeta interior
+
+Aplicar:
+- sombras suaves multicapa
+- pequeños degradados sutiles para simular material
+- diferencias ligeras de tono entre cada pliegue
+- bordes más finos y refinados
+
+2. MEJORAR LA TAPA DEL SOBRE
+La tapa triangular debe verse más cuidada y con más detalle.
+
+Quiero:
+- mejor separación visual entre la tapa y el cuerpo
+- sombra sutil para que se entienda la superposición
+- un acabado más fino en los pliegues
+- sensación de pieza física y no solo forma geométrica plana
+
+3. MEJORAR EL CUERPO DEL SOBRE
+El cuerpo debe sentirse más elegante.
+
+Aplicar:
+- textura o degradado muy sutil tipo papel
+- mejor volumen visual
+- mejor equilibrio entre luz y sombra
+- menos apariencia digital plana
+
+4. MEJORAR EL SELLO / MONOGRAMA CENTRAL
+El sello central tiene potencial, pero debe sentirse más especial.
+
+Quiero:
+- que el círculo se vea más refinado
+- mejor contraste
+- más profundidad
+- ligera sombra o relieve
+- que el monograma se vea más nítido y elegante
+
+Opcional:
+- efecto tipo lacre moderno o emblema fino, sin exagerar
+- leve brillo o relieve sutil
+
+5. MEJORAR LA TARJETA INTERIOR
+La parte visible de la tarjeta interior debe verse más premium.
+
+Aplicar:
+- mejor tipografía
+- mejor centrado
+- más espacio
+- sensación de papel elegante
+- que se asome con más intención visual
+
+No quiero que se vea solo como un bloque blanco detrás del sobre.
+
+6. MANTENER Y REFORZAR LAS ANIMACIONES
+Mantener las animaciones actuales, pero hacer que se sientan más suaves y lujosas.
+
+Ajustar si hace falta:
+- easing más refinado
+- movimiento más delicado
+- menos rigidez en apertura/cierre
+- transición más fluida entre estados
+
+La animación debe sentirse:
+- elegante
+- romántica
+- sofisticada
+- ceremonial
+
+7. AÑADIR DETALLES DECORATIVOS MUY SUTILES
+Quiero pequeños detalles que eleven la estética sin recargar:
+
+Ejemplos:
+- glow suave detrás del sobre
+- sombra difusa debajo
+- ligera textura de fondo
+- reflejo suave en algunas aristas
+- profundidad visual delicada
+
+8. AJUSTAR LA COMPOSICIÓN GENERAL
+El sobre debe sentirse mejor ubicado en pantalla.
+
+Revisar:
+- tamaño general
+- proporción respecto al texto “Tienes una invitación”
+- espacio entre texto y sobre
+- mejor centrado visual
+
+9. ESTILO VISUAL BUSCADO
+Quiero que el resultado se sienta como:
+- una invitación de boda premium
+- delicado y elegante
+- moderno pero clásico
+- sobrio y refinado
+- más realista y más memorable
+
+10. NO HACER
+- no saturar de efectos
+- no cambiar la animación por algo totalmente nuevo
+- no hacerlo caricaturesco
+- no usar brillos exagerados
+- no meter demasiados adornos
+
+RESULTADO ESPERADO
+El sobre debe seguir animándose como ahora, pero verse claramente más elegante, más premium, más realista y más acorde a una invitación de boda de lujo.

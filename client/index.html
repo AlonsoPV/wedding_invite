@@ -268,7 +268,67 @@
             </div>
         </section>
 
-        <!-- 6. Countdown -->
+        <!-- 6. Guestbook Section (Beige) -->
+        <section class="section guestbook-section bg-beige">
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <h2 class="section-title elegant-title">Libro de Firmas</h2>
+                    <div class="elegant-divider"></div>
+                </div>
+                
+                <p class="text animate-on-scroll delay-1" style="margin-bottom: 50px;">Nos haría muy felices recibir unas palabras tuyas y guardar este recuerdo para siempre.</p>
+
+                <div class="guestbook-container">
+                    <!-- Formulario -->
+                    <div class="gb-form-wrapper animate-on-scroll delay-2">
+                        <form id="gb-form" class="gb-form">
+                            <div class="gb-input-group">
+                                <label for="gb-name">Tu nombre</label>
+                                <input type="text" id="gb-name" placeholder="Ej. Familia Rodríguez" required>
+                            </div>
+                            
+                            <div class="gb-input-group">
+                                <label for="gb-message">Mensaje para los novios</label>
+                                <textarea id="gb-message" rows="4" placeholder="Déjanos un deseo o unas palabras..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-guestbook" id="gb-submit-btn">
+                                <span>Dejar mensaje</span>
+                            </button>
+                            
+                            <div class="gb-success-msg" id="gb-success">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"></path></svg>
+                                <span>¡Gracias por dejarnos tus palabras! 🤍</span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Muro de mensajes -->
+                    <div class="gb-messages-wrapper animate-on-scroll delay-3">
+                        <div class="gb-messages-scroll" id="gb-messages-list">
+                            <!-- Placeholder messages -->
+                            <div class="gb-message-card">
+                                <div class="gb-card-header">
+                                    <span class="gb-author">Valeria & Roberto</span>
+                                    <span class="gb-date">Hace 2 días</span>
+                                </div>
+                                <p class="gb-text">¡Qué emoción compartir este día con ustedes! Les deseamos toda la felicidad del mundo en esta nueva etapa. Que su hogar siempre esté lleno de amor y risas.</p>
+                            </div>
+                            
+                            <div class="gb-message-card">
+                                <div class="gb-card-header">
+                                    <span class="gb-author">Tía Carmen</span>
+                                    <span class="gb-date">Hace 1 semana</span>
+                                </div>
+                                <p class="gb-text">Mis niños hermosos, que Dios bendiga su matrimonio siempre. Nos vemos el 7 de noviembre para celebrar a lo grande.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Countdown -->
         <section class="section countdown bg-green">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Faltan</h2>
