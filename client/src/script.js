@@ -142,7 +142,27 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(petal);
     }
 
-    // 6. Botón de Confirmación (RSVP)
+    // 6. Botón Copiar Datos (Mesa de Regalos)
+    const copyBtn = document.getElementById('copy-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const bankData = `Banco: BBVA\nCuenta: 0123456789\nCLABE: 012345678901234567\nBeneficiario: Carlos & Viviana`;
+            navigator.clipboard.writeText(bankData).then(() => {
+                const originalContent = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<span>¡Datos copiados!</span>';
+                copyBtn.classList.add('success');
+                copyBtn.classList.remove('outline');
+                
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalContent;
+                    copyBtn.classList.remove('success');
+                    copyBtn.classList.add('outline');
+                }, 3000);
+            });
+        });
+    }
+
+    // 7. Botón de Confirmación (RSVP)
     if (rsvpBtn) {
         rsvpBtn.addEventListener('click', () => {
             alert('¡Gracias por tu interés! La funcionalidad de confirmación de asistencia estará disponible pronto.');

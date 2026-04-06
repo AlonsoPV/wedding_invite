@@ -754,7 +754,153 @@ body::before {
 }
 
 
-/* ===== Countdown (Green) ===== */
+/* ===== Gifts Section (Beige) ===== */
+.gifts-section {
+    padding: 140px 20px;
+}
+
+.gifts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gift-card {
+    background: var(--ivory);
+    border-radius: 12px;
+    padding: 50px 30px;
+    border: 1px solid rgba(198, 167, 94, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 10px 40px rgba(19, 49, 19, 0.03);
+}
+
+.gift-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(19, 49, 19, 0.08);
+    border-color: rgba(198, 167, 94, 0.4);
+}
+
+.gift-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(198, 167, 94, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    color: var(--gold);
+}
+
+.gift-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.gift-card h3 {
+    font-size: 1.4rem;
+    color: var(--green-main);
+    margin-bottom: 15px;
+    font-family: var(--font-serif);
+}
+
+.gift-card p {
+    font-size: 0.95rem;
+    color: var(--green-sec);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.bank-details {
+    width: 100%;
+    background: var(--bg-beige);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+    border: 1px solid rgba(198, 167, 94, 0.1);
+}
+
+.bank-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(19, 49, 19, 0.05);
+    padding-bottom: 5px;
+}
+
+.bank-row:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.bank-label {
+    color: var(--green-main);
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.bank-value {
+    color: var(--green-sec);
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+.btn-gift {
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-gift.outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--green-main);
+}
+
+.btn-gift.outline:hover {
+    background: rgba(198, 167, 94, 0.1);
+}
+
+.btn-gift.solid {
+    background: var(--green-main);
+    border: 1px solid var(--green-main);
+    color: var(--ivory);
+}
+
+.btn-gift.solid:hover {
+    background: var(--green-sec);
+    border-color: var(--green-sec);
+    box-shadow: 0 5px 15px rgba(19, 49, 19, 0.2);
+}
+
+.btn-gift.success {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ivory);
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+/* ===== 6. Countdown (Green) ===== */
 .timer {
     display: flex;
     justify-content: center;
