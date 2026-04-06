@@ -1,0 +1,126 @@
+Quiero que REDISEÑES VISUALMENTE EL SOBRE DESDE CERO, pero manteniendo la lógica actual de animación y apertura si ya funciona. El problema es que el sobre sigue viéndose prácticamente igual: muy plano, muy geométrico y poco premium. Necesito un cambio visual evidente.
+
+OBJETIVO
+- Que el sobre se vea completamente más refinado y lujoso
+- Mantener la animación actual, pero rehacer el diseño visual
+- Lograr una estética de invitación de boda premium
+- Que el cambio sea notorio, no solo ajustes mínimos
+
+IMPORTANTE
+- Mantén la mecánica de apertura y movimiento
+- Pero rehace el diseño del sobre, pliegues, materiales, profundidad, sello y tarjeta interior
+- No quiero solo “ajustes”; quiero un rediseño visual claro
+
+PROBLEMAS ACTUALES A CORREGIR
+1. El sobre se ve demasiado plano
+2. Los pliegues se ven como triángulos simples sin materialidad
+3. El sello central no se siente premium ni especial
+4. La tarjeta interior parece un bloque plano
+5. No hay suficiente profundidad entre capas
+6. Todo se siente demasiado digital y poco editorial
+
+REDISEÑO VISUAL REQUERIDO
+
+1) REHACER EL SOBRE COMO OBJETO VISUAL MÁS REALISTA
+Quiero que el sobre tenga una construcción visual nueva, no solo los mismos polígonos con otros colores.
+
+Aplicar:
+- diferencias claras de tono entre tapa, cuerpo frontal y laterales
+- sombras internas y externas más sofisticadas
+- sensación de papel de lujo
+- bordes y pliegues con más profundidad
+- un volumen más creíble
+
+El sobre debe sentirse como una pieza física elegante.
+
+2) NUEVOS PLIEGUES Y CAPAS
+La tapa triangular y la parte frontal deben verse más refinadas.
+
+Quiero:
+- pliegues mejor definidos
+- más separación visual entre capa superior e inferior
+- sombras sutiles de superposición
+- pequeños highlights suaves en aristas
+- capas internas visibles con más intención
+
+3) REDISEÑAR EL SELLO CENTRAL
+El sello actual no está generando impacto.
+
+Quiero que el sello se vea como una pieza premium:
+- más profundo
+- más refinado
+- con look tipo lacre elegante / emblema fino
+- borde más trabajado
+- sombra más realista
+- relieve sutil
+- monograma más nítido y bien centrado
+
+Debe sentirse como un elemento protagonista.
+
+4) REDISEÑAR LA TARJETA INTERIOR
+La tarjeta visible dentro del sobre debe sentirse como una invitación real.
+
+Quiero:
+- mejor proporción
+- mejor margen interno
+- apariencia de papel fino
+- tipografía elegante
+- más espacio y respiración
+- que al asomarse se vea editorial, no solo texto detrás del sobre
+
+5) SOMBRAS Y PROFUNDIDAD REALES
+Ahora la sombra es muy simple.
+
+Aplicar:
+- sombra principal suave y amplia debajo del sobre
+- sombra de contacto cerca de la base
+- sombras ligeras entre capa de tapa, sello y tarjeta
+- profundidad visual clara entre cada elemento
+
+6) MATERIALES MÁS PREMIUM
+No quiero colores sólidos planos.
+
+Aplicar:
+- degradados MUY sutiles
+- textura casi imperceptible de papel
+- acabado mate elegante
+- ligera variación tonal entre superficies
+
+Todo muy sutil, sin recargar.
+
+7) COMPOSICIÓN MÁS ELEGANTE
+Mejorar cómo se presenta en pantalla:
+- mejor relación entre título y sobre
+- más espacio vertical
+- mejor centrado
+- más aire alrededor
+- sombra/glow ambiental muy delicado detrás del sobre
+
+8) ANIMACIÓN
+Mantener la animación actual si funciona, pero hacer que se sienta más lujosa:
+- easing más suave
+- movimiento más ceremonial
+- apertura más refinada
+- menos sensación mecánica
+
+9) ESTILO FINAL BUSCADO
+Debe sentirse como:
+- invitación de boda de lujo
+- editorial
+- refinada
+- sobria
+- elegante
+- tangible
+- memorable
+
+10) NO HACER
+- no dejar el mismo sobre con cambios mínimos
+- no mantener la misma geometría plana y solo cambiar sombras
+- no hacerlo brillante o exagerado
+- no volverlo caricaturesco
+- no meter adornos excesivos
+
+RESULTADO ESPERADO
+Quiero ver un CAMBIO VISUAL EVIDENTE.
+Debe sentirse como un rediseño real del sobre, no como la misma versión ligeramente pulida.
+La animación puede permanecer, pero el objeto visual debe verse claramente más premium, profundo y refinado.
