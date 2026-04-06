@@ -1,0 +1,135 @@
+Quiero rediseñar la sección "Detalles del Evento" para que se vea más elegante, moderna y con un estilo editorial tipo invitación premium.
+
+OBJETIVO
+- Simplificar la sección
+- Mejorar la estética visual
+- Convertir los horarios en una línea del tiempo (timeline)
+- Lograr un diseño más limpio, elegante y aspiracional
+
+CAMBIOS PRINCIPALES
+
+1. SIMPLIFICAR TARJETAS
+Eliminar las tarjetas actuales adicionales y dejar únicamente 3 bloques principales:
+
+- Fecha
+- Hora
+- Lugar
+
+Estos deben:
+- estar alineados horizontalmente (en desktop)
+- centrados
+- con más padding interno
+- bordes sutiles
+- estilo minimalista (menos glow, más elegancia)
+
+Diseño:
+- fondo ligeramente translúcido o sólido elegante
+- borde fino (#C7C9C4 con baja opacidad)
+- iconos simples en dorado o acento
+- tipografía serif elegante para títulos
+- mejor jerarquía (label pequeño + valor grande)
+
+2. REDISEÑAR LOS HORARIOS COMO TIMELINE
+Eliminar el diseño actual de horarios.
+
+Crear una línea del tiempo horizontal estilo invitación de boda.
+
+Estructura:
+
+────────────●────────────●────────────●────────────
+
+Cada punto representa un momento del evento.
+
+Ejemplo:
+- 19:30 → Recepción
+- 20:30 → Brindis
+- 21:30 → Cena
+- 23:00 → Fiesta
+
+Diseño:
+- línea delgada horizontal centrada
+- puntos (dots) elegantes (circulares)
+- el punto activo con color acento (#0176CA o dorado)
+- los textos debajo de cada punto
+
+Formato por punto:
+
+[hora pequeña]
+[dot]
+[evento]
+
+Tipografía:
+- hora: pequeña, elegante
+- evento: más visible
+
+Inspiración:
+timeline minimalista, editorial, tipo invitación premium (como la segunda imagen de referencia)
+
+3. MEJORAR COMPOSICIÓN GENERAL
+
+- Centrar toda la sección
+- Aumentar spacing vertical entre elementos
+- Más aire (white space)
+- Máximo ancho controlado (no full width)
+
+Separación:
+
+[Título]
+   ↓
+[Cards: Fecha / Hora / Lugar]
+   ↓
+[Timeline]
+   ↓
+[CTA]
+
+4. TÍTULO MÁS ELEGANTE
+
+"Detalles del Evento"
+
+Mejorar:
+- usar tipografía serif o más elegante
+- añadir un pequeño divider debajo (línea o detalle dorado)
+- reducir peso visual si está muy grande
+
+5. BOTÓN (CTA)
+
+Mantener:
+"Ver ubicación"
+
+Pero hacerlo más elegante:
+- estilo outline o ghost button
+- borde fino
+- hover suave
+- menos pesado visualmente
+
+6. ESTILO VISUAL GENERAL
+
+Busco:
+- estilo invitación de boda premium
+- elegante, no tech
+- menos glow, más sobriedad
+- más aire y balance
+
+Colores:
+- mantener base actual
+- usar acentos dorados o azul #0176CA con moderación
+
+7. RESPONSIVE
+
+En mobile:
+- cards en vertical
+- timeline puede volverse vertical o scroll horizontal
+- mantener legibilidad
+
+RESULTADO ESPERADO
+
+La sección debe verse:
+- más limpia
+- más elegante
+- más premium
+- más parecida a una invitación digital
+- menos como dashboard o app
+
+IMPORTANTE
+No saturar con efectos.
+Priorizar elegancia, tipografía y spacing.
