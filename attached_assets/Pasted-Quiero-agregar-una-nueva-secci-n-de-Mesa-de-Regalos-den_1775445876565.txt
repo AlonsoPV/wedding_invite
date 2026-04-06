@@ -1,0 +1,104 @@
+Quiero agregar una nueva sección de “Mesa de Regalos” dentro de la invitación digital, manteniendo el mismo estilo visual elegante, editorial y premium del resto del sitio.
+
+OBJETIVO
+- Añadir una sección clara y estética para compartir opciones de regalo
+- Mantener coherencia con la experiencia visual de boda de lujo
+- Hacerla funcional, limpia y emocionalmente bien presentada
+
+TÍTULO DE LA SECCIÓN
+“Mesa de Regalos”
+
+SUBTÍTULO / TEXTO INTRODUCTORIO
+Agregar un texto breve y elegante como este:
+
+“Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros, aquí encontrarás algunas opciones.”
+
+ESTRUCTURA DE LA SECCIÓN
+La sección debe incluir 3 posibles tipos de regalo, con diseño visual limpio y premium:
+
+1. Transferencia bancaria
+2. Liverpool / tienda / registry
+3. Sobre el día del evento
+
+Cada opción debe ir en una tarjeta o bloque elegante con:
+- ícono minimalista
+- título
+- breve descripción
+- botón o enlace si aplica
+
+CONTENIDO SUGERIDO
+
+1. Transferencia bancaria
+Título:
+“Transferencia bancaria”
+
+Texto:
+“Si deseas hacernos llegar tu regalo de esta forma, puedes usar los siguientes datos.”
+
+Debajo mostrar placeholders editables:
+- Banco:
+- Cuenta:
+- CLABE:
+- Beneficiario:
+
+Agregar un botón pequeño:
+“Copiar datos”
+
+2. Mesa de regalos / tienda
+Título:
+“Mesa de Regalos”
+
+Texto:
+“También puedes encontrar nuestra mesa de regalos en el siguiente enlace.”
+
+Agregar botón:
+“Ver mesa de regalos”
+
+Este enlace debe quedar editable fácilmente.
+
+3. Sobre el día del evento
+Título:
+“Sobre el día del evento”
+
+Texto:
+“Si lo prefieres, podrás entregar tu regalo el día de la celebración.”
+
+DISEÑO
+Quiero que esta sección se vea:
+- elegante
+- minimalista
+- premium
+- consistente con una invitación de boda de lujo
+
+Aplicar:
+- buen espacio en blanco
+- tarjetas refinadas
+- bordes finos
+- tipografía elegante
+- íconos discretos
+- botones delicados y modernos
+
+ESTILO VISUAL
+- Mantener la paleta y estética actual
+- Nada tipo e-commerce ni tarjetas pesadas
+- Debe sentirse emocional, sobrio y bien diseñado
+
+COMPOSICIÓN
+En desktop:
+- 3 bloques alineados horizontalmente o en un grid elegante
+En mobile:
+- bloques apilados verticalmente con buen espaciado
+
+INTERACCIÓN
+- Hover suave en tarjetas
+- Hover elegante en botones
+- Si hay botón “Copiar datos”, mostrar feedback:
+  “Datos copiados”
+
+RESPONSIVE
+- Debe verse muy bien en móvil
+- Tipografía legible
+- Botones cómodos de tocar
+
+RESULTADO ESPERADO
+La sección de mesa de regalos debe sentirse como una parte natural de la invitación, con elegancia, claridad y buena experiencia visual.
