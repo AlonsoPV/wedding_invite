@@ -1,0 +1,50 @@
+Quiero corregir un problema visual en la animación del sobre: la tarjeta interior se está viendo por debajo del sobre durante la animación, y eso rompe el efecto premium.
+
+PROBLEMA
+- La tarjeta/invitación interior aparece visualmente debajo del sobre en algunos momentos de la animación.
+- Parece que el orden de capas (z-index / stacking context / transform layers) no está bien resuelto.
+- La tarjeta debería salir desde dentro del sobre, no verse “por debajo” de él.
+
+OBJETIVO
+Corregir la jerarquía visual de capas para que la tarjeta siempre se perciba saliendo correctamente desde el interior del sobre.
+
+INSTRUCCIONES
+
+1. REVISAR Z-INDEX Y STACKING CONTEXT
+- Ajustar correctamente el orden de capas entre:
+  - fondo
+  - sombra del sobre
+  - cuerpo del sobre
+  - tapa del sobre
+  - tarjeta interior
+  - sello central
+- La tarjeta debe quedar:
+  - por encima del fondo
+  - por encima del cuerpo interno cuando corresponda
+  - pero correctamente integrada con la tapa del sobre según el momento de la animación
+
+2. CORREGIR LA SALIDA DE LA TARJETA
+- La tarjeta debe parecer que emerge desde dentro del sobre.
+- No debe verse por debajo del sobre ni atravesar partes incorrectas.
+- Revisar posición absoluta/relativa, overflow, transform-origin y translateY.
+
+3. AJUSTAR LAS CAPAS DE LA TAPA
+- La tapa del sobre debe cubrir o revelar la tarjeta correctamente dependiendo del estado de apertura.
+- Si la tapa está abierta, la tarjeta debe verse saliendo desde adentro.
+- Si la tapa está cerrada, la tarjeta no debe sobresalir de forma incorrecta.
+
+4. REVISAR OVERFLOW Y MÁSCARAS
+- Verificar si algún overflow:hidden o mal uso de contenedores está causando que la tarjeta se renderice mal.
+- Si hace falta, usar un contenedor interno para controlar mejor el recorte visual.
+
+5. MANTENER LA ANIMACIÓN ACTUAL
+- No cambiar la idea general de la animación si ya funciona.
+- Solo corregir el comportamiento visual de capas y profundidad.
+
+6. RESULTADO ESPERADO
+- La tarjeta debe verse claramente saliendo desde dentro del sobre.
+- El efecto debe sentirse limpio, elegante y premium.
+- No debe verse debajo del sobre en ningún momento.
+
+IMPORTANTE
+Prioriza corregir la lógica visual de capas y profundidad. El movimiento puede quedarse casi igual, pero la percepción debe ser correcta.
