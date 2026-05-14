@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Envelope Logic
+    const envelopeWrapper = document.getElementById('envelope');
+    const envelopeScreen = document.getElementById('envelope-screen');
+    const invitationScreen = document.getElementById('invitation-screen');
+
+    if (envelopeWrapper && envelopeScreen && invitationScreen) {
+        envelopeWrapper.addEventListener('click', () => {
+            envelopeWrapper.classList.add('open');
+            
+            setTimeout(() => {
+                envelopeScreen.classList.remove('active');
+                invitationScreen.classList.add('active');
+                
+                // Trigger hero animations after envelope disappears
+                setTimeout(() => {
+                    const heroElements = document.querySelectorAll('.hero .stagger-1, .hero .stagger-2, .hero .stagger-3, .hero .stagger-4, .hero .stagger-5');
+                    heroElements.forEach(el => {
+                        el.style.animationPlayState = 'running';
+                    });
+                }, 100);
+            }, 1200);
+        });
+    }
+
+    // Pause hero animations initially if envelope is present
+    if (envelopeScreen) {
+        const heroElements = document.querySelectorAll('.hero .stagger-1, .hero .stagger-2, .hero .stagger-3, .hero .stagger-4, .hero .stagger-5');
+        heroElements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+        });
+    }
+
     // Nav Scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {

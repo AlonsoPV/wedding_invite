@@ -107,6 +107,151 @@ body::before {
   color: var(--antique-gold);
 }
 
+/* Envelope & App Screens */
+.envelope-screen {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: var(--forest-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.envelope-screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.invitation-screen {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+}
+
+.invitation-screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.envelope-wrapper {
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.envelope-text {
+  position: absolute;
+  top: -80px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--antique-gold);
+  font-style: italic;
+  animation: pulse 2s infinite;
+}
+
+.envelope-body {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  background: var(--ivory);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.envelope-flap {
+  position: absolute;
+  width: 0; height: 0;
+  border-style: solid;
+}
+
+.envelope-flap.top {
+  top: 0; left: 0;
+  border-width: 100px 160px 0 160px;
+  border-color: #EAE3D5 transparent transparent transparent;
+  transform-origin: top;
+  z-index: 4;
+  transition: transform 0.6s ease;
+}
+
+.envelope-flap.bottom {
+  bottom: 0; left: 0;
+  border-width: 0 160px 100px 160px;
+  border-color: transparent transparent #D8CFBD transparent;
+  z-index: 3;
+}
+
+.envelope-flap.left {
+  top: 0; left: 0;
+  border-width: 100px 0 100px 160px;
+  border-color: transparent transparent transparent #E1D8C6;
+  z-index: 3;
+}
+
+.envelope-flap.right {
+  top: 0; right: 0;
+  border-width: 100px 160px 100px 0;
+  border-color: transparent #E1D8C6 transparent transparent;
+  z-index: 3;
+}
+
+.letter {
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  background: #fff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--antique-gold);
+  transition: transform 0.8s ease;
+}
+
+.letter-names {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--forest-green);
+  margin-bottom: 5px;
+}
+
+.letter-invite {
+  font-size: 0.8rem;
+  color: rgba(44, 74, 53, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.letter-open-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--antique-gold);
+}
+
+.envelope-wrapper.open .envelope-flap.top {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope-wrapper.open .letter {
+  transform: translateY(-80px);
+  z-index: 5;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+.envelope-wrapper.open .envelope-text {
+  opacity: 0;
+}
+
 /* 1. HERO */
 .hero {
   min-height: 100vh;
