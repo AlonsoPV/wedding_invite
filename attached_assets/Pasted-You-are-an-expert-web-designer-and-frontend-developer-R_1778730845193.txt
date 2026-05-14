@@ -1,0 +1,105 @@
+You are an expert web designer and frontend developer. Rebuild and significantly upgrade 
+this Spanish-language wedding landing page for "Viviana & Carlos" (November 7, 2026) 
+as a single HTML file with embedded CSS and JavaScript. The current design has the right 
+concept but needs a major aesthetic and UX overhaul.
+
+---
+
+## AESTHETIC DIRECTION
+Luxury editorial wedding — think Vogue Latinoamérica meets high-end hacienda chic.
+- Color palette: Deep forest green (#2C4A35), warm ivory/cream (#F5F0E8), antique gold 
+  (#B8965A), dusty rose (#D4A8A0) as a soft accent
+- Typography: Import from Google Fonts — "Cormorant Garamond" (display, italic) for 
+  headings + "Jost" (300/400 weight) for body text. NO Inter, Roboto, or system fonts.
+- Texture: Add a subtle noise/grain overlay on sections using CSS pseudo-elements 
+  (opacity 0.03–0.05). Use a faint floral SVG pattern (hand-drawn look) as decorative 
+  dividers between sections.
+- Motif: Thin gold horizontal rules, small botanical SVG icons (leaves, petals), 
+  and generous whitespace.
+
+---
+
+## LAYOUT & SECTIONS (in order)
+
+### 1. HERO
+- Full-viewport height
+- Ivory background with a large, faint watercolor botanical illustration behind the text 
+  (generate it as an inline SVG with soft green and dusty rose tones)
+- Animated staggered entrance: "¡Nos Casamos!" fades in first (Cormorant, italic, 60px, 
+  antique gold), then "Viviana & Carlos" (large, elegant, forest green), then the date 
+  (Jost light, letter-spacing: 0.3em)
+- A delicate animated scroll indicator (thin line that pulses downward)
+- The couple's wedding photo centered below the names, with a soft rounded border 
+  (border-radius: 4px) and a thin gold frame effect using box-shadow
+- Italic quote: "Con amor, celebramos este momento" in Cormorant Italic
+
+### 2. EVENT DETAILS (dark green bg)
+- Section title "Detalles del Evento" in Cormorant, ivory, centered, with thin gold rules 
+  on either side
+- 3 cards (Fecha / Hora / Lugar) with glassmorphism effect: 
+  semi-transparent white borders, soft backdrop blur, hover lift animation
+- Timeline below: 4 milestones (Recepción 11:00 / Brindis 13:30 / Cena 15:00 / 
+  Fiesta 16:00) displayed as a horizontal line with gold dots and labels below
+
+### 3. COUNTDOWN (still dark green bg)
+- Title "Faltan" in Cormorant, ivory
+- 4 boxes: Días / Horas / Minutos / Segundos — each in a gold-bordered square with 
+  large Cormorant numbers and small Jost labels
+- Wire up a real JavaScript countdown to: November 7, 2026 at 11:00 AM Mexico City time
+- Boxes should have a subtle pulse animation when seconds tick
+
+### 4. DRESS CODE (ivory bg)
+- Title "Dress Code" in Cormorant Italic, antique gold
+- Two columns: Mujer (dusty rose swatch circle + description) and Hombre (forest green 
+  swatch circle + description)
+- Add a small illustrated note: "Evita el blanco y el negro" in light italic text
+- Soft botanical SVG divider at top and bottom of section
+
+### 5. MESA DE REGALOS (dark green bg)
+- Title "Mesa de Regalos" in Cormorant, ivory
+- Subtitle in Jost light: "El mejor regalo es tu presencia, pero si deseas tener un detalle 
+  con nosotros, te compartimos nuestra mesa de regalos."
+- 3 option cards (Liverpool / Cuenta Bancaria / El día del evento) with:
+  - Rounded corners (border-radius: 16px)
+  - Ivory background
+  - Gold icon at top (SVG gift/bank/heart icon)
+  - On hover: card lifts with a gold shadow
+  - "Liverpool" card has a CTA button in forest green with ivory text
+  - "Cuenta Bancaria" shows bank details in a monospace-styled block (Banco / CLABE / 
+    Nombre del titular / Tarjeta & Venmo fields — use placeholder text)
+  - "El día del evento" is a softer, decorative card
+
+### 6. LIBRO DE FIRMAS (ivory bg)
+- Title "Libro de Firmas" in Cormorant, forest green
+- Subtitle: "Para nosotros cada firma tiene un lugar especial en nuestro corazón y 
+  guardaremos este recuerdo para siempre."
+- Elegant form with:
+  - Floating label inputs (CSS-only animation)
+  - Fields: Tu nombre / Tu mensaje para los novios / Sube una foto (optional file input)
+  - Submit button: full-width, forest green bg, ivory text, "DEJAR MENSAJE", 
+    with a subtle shimmer hover animation
+  - On submit: show a success message with a small animated heart
+
+### 7. CONFIRMACIÓN (dark green bg)
+- Title "Confirmación" in Cormorant, ivory
+- Brief text: "Por favor, confirma tu asistencia antes del:"  + bold date
+- Large CTA button: "CONFIRMAR ASISTENCIA" — antique gold background, 
+  forest green text, uppercase Jost, strong hover state with scale transform
+- Centered, generous vertical padding
+
+---
+
+## GLOBAL REQUIREMENTS
+
+- Fully responsive (mobile-first). On mobile, the event timeline stacks vertically. 
+  Cards go to single column.
+- Smooth scroll behavior (scroll-behavior: smooth)
+- Sticky nav (optional): a minimal top bar that appears after scrolling past the hero, 
+  showing "V & C" monogram in gold with anchor links to each section
+- CSS transitions on all interactive elements (duration: 0.3s ease)
+- Page load: staggered fade-in for the hero section using CSS @keyframes with 
+  animation-delay per element
+- NO external JS libraries except vanilla JS for the countdown timer
+- All text must remain in Spanish
+- The overall feeling should be: romantic, editorial, refined luxury — not 
+  overly decorative or cluttered
