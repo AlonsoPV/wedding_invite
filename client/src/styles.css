@@ -922,9 +922,6 @@ body::before {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-    stroke: var(--gold);
-}
-
 
 /* ===== Gifts Section (Beige) ===== */
 .gifts-section {
