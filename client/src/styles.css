@@ -1,4 +1,18 @@
 /* ===== Variables & Theme ===== */
+@font-face {
+    font-family: 'Orange Avenue';
+    src: url('/fonts/OrangeAvenueDEMO-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orange Avenue Outline';
+    src: url('/fonts/OrangeAvenueOutlineDEMO-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --bg-beige: #F9F6F0; /* Alabaster / Accessible Beige */
     --bg-light: #FFFFFF;
@@ -10,8 +24,8 @@
     
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Inter', sans-serif;
-    --font-script: 'Pinyon Script', cursive;
-    --font-rustic: 'Road Rage', cursive;
+    --font-script: 'Orange Avenue', cursive;
+    --font-rustic: 'Orange Avenue', cursive;
 }
 
 /* ===== Global Reset ===== */
@@ -862,7 +876,7 @@ body::before {
     font-size: 4rem;
     color: var(--gold);
     display: block;
-    margin-bottom: -15px;
+    margin-bottom: 5px;
     line-height: 1;
     font-weight: 400;
 }
@@ -880,20 +894,34 @@ body::before {
 .dc-illustrations {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 80px;
+    margin: 40px 0;
 }
 
 .dc-illus-item {
-    width: 60px;
-    height: 120px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
-.dc-icon {
-    width: 100%;
-    height: 100%;
+.dc-illus-item svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--gold);
+    margin-bottom: 15px;
+    fill: none;
+    stroke-width: 1.5;
+}
+
+.dc-illus-item p {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--ivory);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
     stroke: var(--gold);
 }
 
@@ -913,24 +941,76 @@ body::before {
 }
 
 .gifts-grid {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.gift-card.main-gift-card {
-    background: var(--bg-light);
-    border-radius: 12px;
-    padding: 60px 40px;
-    border: 1px solid rgba(166, 138, 86, 0.15); /* Gold very soft */
+.gift-card {
+    background: rgba(248, 246, 242, 0.05);
+    border: 1px solid rgba(198, 167, 94, 0.3);
+    padding: 40px 30px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-    max-width: 500px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gift-card:hover {
+    transform: translateY(-5px);
+    background: rgba(248, 246, 242, 0.1);
+}
+
+.gift-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--ivory);
+    margin-bottom: 15px;
+}
+
+.gift-card p {
+    font-size: 0.95rem;
+    color: rgba(248, 246, 242, 0.8);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.bank-details {
     width: 100%;
+    margin-bottom: 30px;
+    text-align: left;
+    background: rgba(198, 167, 94, 0.1);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.bank-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed rgba(198, 167, 94, 0.2);
+    padding-bottom: 5px;
+}
+
+.bank-row:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.bank-label {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.bank-value {
+    color: var(--ivory);
+    font-family: monospace;
 }
 
 .gift-card.main-gift-card:hover {
@@ -990,22 +1070,24 @@ body::before {
 .btn-gift.outline {
     background: transparent;
     border: 1px solid var(--gold);
-    color: var(--green-main);
-}
-
-.btn-gift.outline:hover {
-    background: rgba(198, 167, 94, 0.1);
-}
-
-.btn-gift.solid {
-    background: var(--green-main);
-    border: 1px solid var(--green-main);
     color: var(--ivory);
 }
 
+.btn-gift.outline:hover {
+    background: rgba(198, 167, 94, 0.2);
+    color: var(--ivory);
+}
+
+.btn-gift.solid {
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: var(--green-main);
+}
+
 .btn-gift.solid:hover {
-    background: var(--green-sec);
-    border-color: var(--green-sec);
+    background: var(--ivory);
+    border-color: var(--ivory);
+    color: var(--green-main);
     box-shadow: 0 5px 15px rgba(19, 49, 19, 0.2);
 }
 
