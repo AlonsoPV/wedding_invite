@@ -1,14 +1,15 @@
 /* ===== Variables & Theme ===== */
 :root {
-    --bg-beige: #F5EFE6;
-    --green-main: #133113;
-    --green-sec: #0F2C1A;
-    --green-ter: #0E271A;
+    --bg-beige: #F9F6F0; /* Alabaster / Accessible Beige */
+    --bg-light: #FFFFFF;
+    --green-main: #3B4D36; /* Ripe Olive */
+    --green-sec: #8A9A86; /* Clary Sage */
+    --green-ter: #2A3626;
     --ivory: #F8F6F2;
-    --gold: #C6A75E;
+    --gold: #A68A56;
     
-    --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Poppins', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
     --font-script: 'Pinyon Script', cursive;
 }
 
@@ -499,73 +500,57 @@ body::before {
 .delay-3 { transition-delay: 450ms; }
 .delay-4 { transition-delay: 600ms; }
 
-/* ===== 2. Story Section (Beige) ===== */
-.story-section {
-    padding: 140px 20px;
+/* ===== 2. Photo Section (Beige) ===== */
+.photo-section {
+    padding: 100px 20px;
 }
 
-.story-container {
-    max-width: 700px;
-}
-
-.story-quote {
-    position: relative;
-    padding: 50px 40px;
-    background: var(--ivory);
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(19, 49, 19, 0.05);
-    margin-bottom: 50px;
+.photo-highlight {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    border: 1px solid rgba(198, 167, 94, 0.2);
 }
 
-.story-ornament {
-    width: 30px;
-    height: 30px;
-    color: var(--gold);
-    margin-bottom: 20px;
+.photo-frame {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 65%; /* Aspect ratio */
 }
 
-.story-quote p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    color: var(--green-main);
-    font-weight: 300;
+.highlight-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s ease;
+}
+
+.photo-frame:hover .highlight-img {
+    transform: scale(1.02);
+}
+
+.photo-caption {
     font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--green-main);
     font-style: italic;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
-.story-line {
-    width: 60px;
-    height: 1px;
-    background: var(--gold);
-    margin: 30px auto 0;
+@media (max-width: 768px) {
+    .photo-frame {
+        padding-bottom: 120%; /* Portrait on mobile */
+    }
+    .photo-caption {
+        font-size: 1.4rem;
+    }
 }
-
-.story-bullets {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.story-bullets li {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.05rem;
-    color: var(--green-sec);
-    font-weight: 300;
-}
-
-.story-bullets li svg {
-    width: 20px;
-    height: 20px;
-    color: var(--gold);
-}
-
 
 /* ===== 3. Details Section (Green) ===== */
 .details-section {
@@ -859,7 +844,7 @@ body::before {
 }
 
 
-/* ===== 4. Dress Code & Outfit Inspo ===== */
+/* ===== 4. Dress Code ===== */
 .dresscode-section {
     padding: 120px 20px;
     text-align: center;
@@ -895,12 +880,11 @@ body::before {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-bottom: 40px;
 }
 
 .dc-illus-item {
-    width: 50px;
-    height: 100px;
+    width: 60px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -912,200 +896,52 @@ body::before {
     stroke: var(--gold);
 }
 
-/* Text Description */
-.dc-description {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 2;
-    margin-bottom: 60px;
-    color: var(--ivory);
-    letter-spacing: 1px;
-}
-
-.dc-description p {
-    margin-bottom: 8px;
-}
-
-.dc-gender {
-    font-family: var(--font-serif);
-    font-weight: 600;
-    font-style: italic;
-    color: var(--gold);
-    margin-right: 8px;
-    font-size: 1.1rem;
-}
-
-/* Center Divider */
-.center-divider {
-    margin: 0 auto 80px auto;
-    width: 60px;
-    height: 1px;
-    background-color: var(--gold);
-    opacity: 0.5;
-}
-
-/* Outfit Inspo Section */
-.inspo-section {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.inspo-header {
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.inspo-title {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: var(--ivory);
-}
-
-.inspo-script {
-    font-family: var(--font-script);
-    font-size: 3.5rem;
-    color: var(--gold);
-    position: absolute;
-    top: 10px;
-    right: -30px;
-    line-height: 1;
-}
-
-.inspo-intro {
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: rgba(248, 246, 242, 0.8);
-    max-width: 450px;
-    margin: 0 auto 50px auto;
-    line-height: 1.8;
-}
-
-/* Inspiration Board */
-.inspo-board {
-    background-color: var(--ivory);
-    border-radius: 4px;
-    padding: 12px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    margin-bottom: 50px;
-    transform: rotate(-1deg);
-    transition: transform 0.4s ease;
-}
-
-.inspo-board:hover {
-    transform: rotate(0deg);
-}
-
-.inspo-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 220px 220px;
-    gap: 8px;
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.inspo-img {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: transform 0.8s ease;
-}
-
-.inspo-board:hover .inspo-img {
-    transform: scale(1.03);
-}
-
-/* Placeholder background colors/images for the grid items */
-.img-1 { 
-    background-color: #e3d5c8; 
-    grid-row: 1 / 3;
-    background-image: url('https://images.unsplash.com/photo-1594552072238-1616c04f938f?q=80&w=800&auto=format&fit=crop');
-} 
-.img-2 { 
-    background-color: #d1d5db; 
-    background-image: url('https://images.unsplash.com/photo-1550005809-91ad75fb315f?q=80&w=800&auto=format&fit=crop');
-}
-.img-3 { 
-    background-color: #a3b19b; 
-    background-image: url('https://images.unsplash.com/photo-1594552071981-d14c2b9a7ce3?q=80&w=800&auto=format&fit=crop');
-}
-.img-4 { display: none; } 
-
-.inspo-caption {
-    font-family: var(--font-serif);
-    font-style: italic;
-    color: #888;
-    font-size: 0.9rem;
-    margin-top: 15px;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-/* Button */
-.inspo-btn {
-    display: inline-block;
-    padding: 14px 40px;
-    background-color: transparent;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    border-radius: 0;
-}
-
-.inspo-btn:hover {
-    background-color: var(--gold);
-    color: var(--green-main);
-}
-
 
 /* ===== Gifts Section (Beige) ===== */
 .gifts-section {
     padding: 140px 20px;
 }
 
+.gifts-intro {
+    font-size: 1.1rem;
+    color: var(--green-sec);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    line-height: 1.8;
+}
+
 .gifts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
 }
 
-.gift-card {
-    background: var(--ivory);
+.gift-card.main-gift-card {
+    background: var(--bg-light);
     border-radius: 12px;
-    padding: 50px 30px;
-    border: 1px solid rgba(198, 167, 94, 0.2);
+    padding: 60px 40px;
+    border: 1px solid rgba(166, 138, 86, 0.15); /* Gold very soft */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 10px 40px rgba(19, 49, 19, 0.03);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    max-width: 500px;
+    width: 100%;
 }
 
-.gift-card:hover {
+.gift-card.main-gift-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 50px rgba(19, 49, 19, 0.08);
-    border-color: rgba(198, 167, 94, 0.4);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
 }
 
 .gift-icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(198, 167, 94, 0.1);
+    background: rgba(166, 138, 86, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1118,56 +954,23 @@ body::before {
     height: 24px;
 }
 
-.gift-card h3 {
-    font-size: 1.4rem;
-    color: var(--green-main);
-    margin-bottom: 15px;
-    font-family: var(--font-serif);
-}
-
-.gift-card p {
+.btn-gift-main {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: var(--green-main);
+    color: var(--ivory);
+    border-radius: 30px;
+    font-family: var(--font-sans);
     font-size: 0.95rem;
-    color: var(--green-sec);
-    line-height: 1.6;
-    margin-bottom: 30px;
-    opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 77, 54, 0.2);
 }
 
-.bank-details {
-    width: 100%;
-    background: var(--bg-beige);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    text-align: left;
-    border: 1px solid rgba(198, 167, 94, 0.1);
-}
-
-.bank-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    border-bottom: 1px solid rgba(19, 49, 19, 0.05);
-    padding-bottom: 5px;
-}
-
-.bank-row:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.bank-label {
-    color: var(--green-main);
-    font-weight: 500;
-    opacity: 0.7;
-}
-
-.bank-value {
-    color: var(--green-sec);
-    font-family: monospace;
-    font-size: 0.95rem;
+.btn-gift-main:hover {
+    background-color: var(--green-ter);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 77, 54, 0.3);
 }
 
 .btn-gift {
@@ -1215,33 +1018,33 @@ body::before {
     margin-top: auto;
 }
 
-/* ===== Guestbook Section (Beige) ===== */
+/* ===== 7. Guestbook Section (Green) ===== */
 .guestbook-section {
     padding: 140px 20px;
 }
 
 .guestbook-container {
     display: flex;
+    flex-direction: column;
     gap: 50px;
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
-    align-items: flex-start;
+    align-items: center;
 }
 
 /* Formulario */
 .gb-form-wrapper {
-    flex: 1;
+    width: 100%;
     background: var(--ivory);
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid rgba(198, 167, 94, 0.2);
-    box-shadow: 0 10px 40px rgba(19, 49, 19, 0.03);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .gb-form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     position: relative;
 }
 
@@ -1256,6 +1059,7 @@ body::before {
     color: var(--green-main);
     font-size: 1.1rem;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .gb-input-group input,
@@ -1263,7 +1067,7 @@ body::before {
     width: 100%;
     padding: 15px;
     background: transparent;
-    border: 1px solid rgba(198, 167, 94, 0.3);
+    border: 1px solid rgba(166, 138, 86, 0.3); /* Gold light border */
     border-radius: 4px;
     font-family: var(--font-sans);
     font-size: 0.95rem;
@@ -1275,8 +1079,8 @@ body::before {
 .gb-input-group textarea:focus {
     outline: none;
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(198, 167, 94, 0.1);
-    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(166, 138, 86, 0.1);
+    background: #fff;
 }
 
 .gb-input-group input::placeholder,
@@ -1287,7 +1091,7 @@ body::before {
 
 .btn-guestbook {
     padding: 16px 30px;
-    background: var(--green-main);
+    background: var(--gold);
     color: var(--ivory);
     border: none;
     border-radius: 4px;
@@ -1301,8 +1105,9 @@ body::before {
 }
 
 .btn-guestbook:hover {
-    background: var(--green-sec);
-    box-shadow: 0 8px 20px rgba(19, 49, 19, 0.15);
+    background: var(--green-main);
+    color: var(--gold);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
 }
 
@@ -1423,35 +1228,56 @@ body::before {
     }
 }
 
-/* ===== 7. Countdown (Green) ===== */
+/* ===== 7. Countdown (Beige) ===== */
+.countdown {
+    padding: 100px 20px;
+}
+
 .timer {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .time-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 80px;
+    justify-content: center;
+    background-color: var(--bg-beige);
+    border: 1px solid rgba(166, 138, 86, 0.3); /* Gold border */
+    border-radius: 8px;
+    min-width: 100px;
+    height: 110px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .time-block span {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: var(--font-serif);
-    color: var(--gold);
+    color: var(--green-main);
     line-height: 1;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .time-block p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--ivory);
-    opacity: 0.8;
+    color: var(--green-sec);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .timer { gap: 15px; }
+    .time-block {
+        min-width: 75px;
+        height: 90px;
+    }
+    .time-block span { font-size: 2.2rem; }
+    .time-block p { font-size: 0.65rem; }
 }
 
 /* ===== Buttons ===== */

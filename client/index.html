@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/src/styles.css">
@@ -66,17 +66,14 @@
             </div>
         </header>
 
-        <!-- 2. Our Story -->
-        <section class="section story-section bg-beige">
-            <div class="container story-container">
-                <h2 class="section-title animate-on-scroll">Nuestra Historia</h2>
-                
-                <div class="story-quote animate-on-scroll delay-1">
-                    <svg class="story-ornament" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 0L22.5 17.5L40 20L22.5 22.5L20 40L17.5 22.5L0 20L17.5 17.5L20 0Z" fill="currentColor"/>
-                    </svg>
-                    <p>“Lo que comenzó con una conversación sencilla, se convirtió en un ‘sí’ para toda la vida. Hoy celebramos el camino que hemos construido juntos y el hogar que estamos creando.”</p>
-                    <div class="story-line"></div>
+        <!-- 2. Photo Section (Replaces Our Story) -->
+        <section class="section photo-section bg-beige">
+            <div class="container">
+                <div class="photo-highlight animate-on-scroll">
+                    <div class="photo-frame">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop" alt="Viviana y Carlos" class="highlight-img">
+                    </div>
+                    <p class="photo-caption">Con amor, celebramos este momento</p>
                 </div>
             </div>
         </section>
@@ -100,11 +97,12 @@
                         <h4>Hora</h4>
                         <p>19:30 hrs</p>
                     </div>
-                    <div class="elegant-card animate-on-scroll delay-3">
+                    <a href="https://maps.google.com" target="_blank" class="elegant-card location-card animate-on-scroll delay-3">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         <h4>Lugar</h4>
                         <p>Camino Real Polanco</p>
-                    </div>
+                        <span class="location-cta">Ver ubicación en mapa</span>
+                    </a>
                 </div>
 
                 <div class="elegant-timeline animate-on-scroll delay-2">

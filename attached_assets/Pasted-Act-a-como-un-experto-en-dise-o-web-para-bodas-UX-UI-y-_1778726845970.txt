@@ -1,0 +1,243 @@
+Actúa como un experto en diseño web para bodas, UX/UI y desarrollo frontend. Necesito que optimices el sitio web de invitación de boda con un diseño elegante, romántico, limpio y responsivo, usando como referencia visual la paleta de colores de la imagen adjunta.
+
+Paleta de colores a usar
+
+Utiliza una paleta inspirada en estos tonos:
+
+Verde olivo oscuro / Ripe Olive
+Verde salvia / Clary Sage
+Blanco cálido / Alabaster
+Beige suave / Accessible Beige
+
+La estética debe sentirse elegante, natural, sofisticada y romántica, evitando colores demasiado saturados. Usa fondos claros en tonos alabaster/beige y acentos en verde olivo o verde salvia para títulos, botones, íconos, bordes y detalles decorativos.
+
+Cambios generales de diseño
+
+Rediseña la página con una estética más acorde a una boda formal:
+
+Diseño elegante, suave y romántico.
+Mucho aire visual y espaciado.
+Bordes redondeados sutiles.
+Cards limpias con sombras muy suaves.
+Elementos decorativos finos como líneas, ornamentos florales minimalistas o separadores elegantes.
+Mantener diseño completamente responsive para celular.
+Mejorar la jerarquía visual de títulos, subtítulos y CTAs.
+Usar animaciones suaves tipo fade-in o slide-up, sin exagerar.
+Tipografía
+
+Cambia la tipografía actual por una combinación más acorde a una boda.
+
+Usa una fuente elegante para títulos, por ejemplo:
+
+Cormorant Garamond
+Playfair Display
+Cormorant Infant
+Libre Baskerville
+
+Y una fuente limpia para textos secundarios:
+
+Inter
+Lato
+Montserrat
+Nunito Sans
+
+Ejemplo recomendado:
+
+Títulos: Cormorant Garamond
+Textos: Inter
+
+Los títulos deben verse elegantes, editoriales y románticos. Los textos deben mantenerse legibles y claros.
+
+Cambios por sección
+1. Nuestra historia
+
+Eliminar por completo la sección de “Nuestra historia”.
+
+En su lugar, colocar una sección visual con espacio para una fotografía destacada de los novios.
+
+La sección debe tener:
+
+Un contenedor amplio para imagen.
+Estilo elegante, tipo editorial.
+Bordes redondeados.
+Posibilidad de reemplazar fácilmente la imagen.
+Puede incluir un pequeño texto decorativo como:
+“Un día para recordar”
+o
+“Con amor, celebramos este momento”
+
+No debe tener demasiado texto.
+
+2. Detalles del evento
+
+Mejorar visualmente la sección de Detalles del evento.
+
+La card de ubicación debe funcionar como botón/enlace hacia Google Maps.
+
+Requisitos:
+
+Toda la card de ubicación debe ser clickeable.
+Al hacer clic debe abrir el mapa en una nueva pestaña.
+Agregar un pequeño CTA dentro de la card, por ejemplo:
+“Ver ubicación en mapa”
+Usar un ícono elegante de ubicación.
+Agregar efecto hover en desktop.
+
+La card debe verse más elegante y clara, con fondo claro, borde suave y acentos verdes.
+
+3. Contador de fecha
+
+Después de la sección de Detalles del evento, agregar la sección del contador.
+
+El orden debe quedar así:
+
+Hero / portada
+Foto destacada en lugar de nuestra historia
+Detalles del evento
+Contador de fecha
+Dresscode
+Mesa de regalos
+Libro de firmas
+Confirmación / RSVP, si ya existe
+
+El contador debe mostrar:
+
+Días
+Horas
+Minutos
+Segundos
+
+Diseño recomendado:
+
+Cards pequeñas individuales.
+Fondo verde olivo o beige claro.
+Números grandes y elegantes.
+Labels pequeños en mayúsculas.
+Debe verse muy bien en móvil.
+
+Texto sugerido para la sección:
+
+“Falta poco para celebrar juntos”
+
+4. Dresscode
+
+En la sección de dresscode, cambiar el texto a:
+
+Etiqueta formal
+
+Eliminar cualquier texto que diga o sugiera:
+
+“Outfit inspirado”
+“Inspírate en estos colores”
+“Outfit recomendado”
+
+La sección debe ser clara, elegante y directa.
+
+Cambiar los íconos actuales por dos íconos o ilustraciones completas:
+
+Una persona con traje completo.
+Una persona con vestido completo.
+
+Los íconos deben mantener el estilo visual de la página:
+
+Minimalistas.
+Elegantes.
+En color verde olivo, verde salvia o tonos neutros.
+Que no se vean infantiles.
+Preferentemente tipo line icon o ilustración simple.
+
+Diseño sugerido:
+
+Título:
+Dress Code
+
+Texto principal:
+Etiqueta formal
+
+Debajo:
+Dos íconos completos, uno de traje y otro de vestido.
+
+5. Mesa de regalos
+
+Mejorar el diseño de la sección de Mesa de regalos.
+
+Debe sentirse más elegante, clara y confiable.
+
+Recomendaciones:
+
+Usar una card central con fondo alabaster o beige.
+Agregar un ícono sutil de regalo.
+Mejorar el botón principal.
+Botón con color verde olivo y texto claro.
+Agregar microcopy cálido.
+
+Texto sugerido:
+
+Mesa de regalos
+
+“Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con nosotros, puedes hacerlo aquí.”
+
+Botón:
+Ver mesa de regalos
+
+El botón debe tener hover y buen tamaño en móvil.
+
+6. Libro de firmas
+
+Mejorar visualmente la sección de Libro de firmas.
+
+Debe sentirse como un espacio especial para dejar mensajes a los novios.
+
+Recomendaciones:
+
+Diseño tipo card elegante.
+Agregar ícono de pluma, carta o corazón sutil.
+Mejorar campos del formulario.
+Los inputs deben tener bordes suaves, buen espaciado y fondo claro.
+El botón debe ser más elegante y visible.
+Agregar copy emocional.
+
+Texto sugerido:
+
+Libro de firmas
+
+“Déjanos un mensaje, un deseo o unas palabras que podamos guardar para siempre.”
+
+Campos sugeridos:
+
+Nombre
+Mensaje
+
+Botón:
+Enviar mensaje
+
+Después de enviar, mostrar confirmación elegante:
+
+“Gracias por dejarnos tus palabras. Las guardaremos con mucho cariño.”
+
+Responsividad
+
+Optimizar especialmente para móvil.
+
+En celular:
+
+Evitar textos demasiado largos.
+Las cards deben ocupar casi todo el ancho disponible.
+Los íconos deben verse proporcionados.
+El contador debe adaptarse en 2 columnas o 4 columnas compactas.
+Los botones deben ser grandes y fáciles de tocar.
+La foto destacada debe tener buena proporción y no verse cortada de forma incómoda.
+Estilo visual esperado
+
+La página debe transmitir:
+
+Boda elegante.
+Formalidad.
+Romanticismo.
+Calidez.
+Naturaleza.
+Sofisticación.
+
+No debe sentirse como una landing genérica, sino como una invitación digital premium.
+
+Antes de implementar, revisa la estructura actual del proyecto y modifica únicamente los componentes necesarios, manteniendo la funcionalidad existente. Asegúrate de no romper rutas, formularios, estados ni componentes ya conectados.
