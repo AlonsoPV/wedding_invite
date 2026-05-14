@@ -8,18 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
         envelopeWrapper.addEventListener('click', () => {
             envelopeWrapper.classList.add('open');
             
+            // Wait for letter to slide up, then expand it
             setTimeout(() => {
-                envelopeScreen.classList.remove('active');
-                invitationScreen.classList.add('active');
+                envelopeWrapper.classList.add('expand');
                 
-                // Trigger hero animations after envelope disappears
+                // Switch screens while expanding
                 setTimeout(() => {
-                    const heroElements = document.querySelectorAll('.hero .stagger-1, .hero .stagger-2, .hero .stagger-3, .hero .stagger-4, .hero .stagger-5');
-                    heroElements.forEach(el => {
-                        el.style.animationPlayState = 'running';
-                    });
-                }, 100);
-            }, 1200);
+                    envelopeScreen.classList.remove('active');
+                    invitationScreen.classList.add('active');
+                    
+                    // Trigger hero animations after envelope disappears
+                    setTimeout(() => {
+                        const heroElements = document.querySelectorAll('.hero .stagger-1, .hero .stagger-2, .hero .stagger-3, .hero .stagger-4, .hero .stagger-5');
+                        heroElements.forEach(el => {
+                            el.style.animationPlayState = 'running';
+                        });
+                    }, 100);
+                }, 800);
+            }, 800);
         });
     }
 
