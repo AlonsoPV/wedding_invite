@@ -22,6 +22,9 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--ivory);
+  background:
+    radial-gradient(circle at top, rgba(184, 147, 83, 0.10), transparent 32%),
+    linear-gradient(180deg, #f7f2e8 0%, #efe7d8 100%);
   color: var(--forest-green);
   position: relative;
   overflow-x: hidden;
@@ -39,9 +42,8 @@ body::before {
 }
 
 .container {
-  max-width: 1100px;
+  width: min(100% - 40px, 1080px);
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .text-center { text-align: center; }
@@ -321,7 +323,7 @@ body::before {
 .hero-subtitle {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 3.5rem;
+  font-size: clamp(1.8rem, 7vw, 3rem);
   color: var(--antique-gold);
   margin-bottom: -10px;
   opacity: 0;
@@ -330,10 +332,11 @@ body::before {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: 5.5rem;
+  font-size: clamp(3.2rem, 14vw, 6rem);
   font-weight: 500;
   color: var(--forest-green);
-  line-height: 1.1;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
   opacity: 0;
   animation: fadeInUp 1s ease forwards 0.6s;
@@ -341,20 +344,42 @@ body::before {
 
 .hero-date {
   font-weight: 300;
-  letter-spacing: 0.3em;
-  font-size: 1.1rem;
-  margin-bottom: 50px;
+  letter-spacing: 0.35em;
+  font-size: clamp(0.85rem, 3.4vw, 1.25rem);
+  margin-top: 20px;
+  margin-bottom: 32px;
   opacity: 0;
   animation: fadeInUp 1s ease forwards 1s;
 }
 
+.wedding-divider {
+  color: rgba(184, 147, 83, 0.45);
+  font-size: 18px;
+  margin: 14px 0 18px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 1.2s;
+}
+
+.wedding-divider::before,
+.wedding-divider::after {
+  content: "";
+  display: inline-block;
+  width: 42px;
+  height: 1px;
+  background: rgba(184, 147, 83, 0.25);
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
 .hero-photo-wrapper {
-  width: 280px;
-  height: 380px;
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px var(--antique-gold), 0 20px 40px rgba(44, 74, 53, 0.15);
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 40px;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  border: 1px solid rgba(184, 147, 83, 0.35);
+  box-shadow: 0 18px 40px rgba(50, 70, 50, 0.10);
   overflow: hidden;
-  margin-bottom: 40px;
   opacity: 0;
   animation: fadeInUp 1s ease forwards 1.4s;
 }
@@ -416,11 +441,12 @@ body::before {
 }
 
 .glass-card {
-  background: rgba(245, 240, 232, 0.03);
-  border: 1px solid rgba(245, 240, 232, 0.15);
+  background: rgba(255, 252, 244, 0.78);
+  border: 1px solid rgba(184, 147, 83, 0.18);
+  box-shadow: 0 16px 36px rgba(50, 70, 50, 0.08);
   backdrop-filter: blur(10px);
-  padding: 40px 30px;
-  border-radius: 12px;
+  padding: clamp(22px, 5vw, 40px);
+  border-radius: 22px;
   text-align: center;
   width: 250px;
   transition: transform 0.4s ease, background 0.4s ease;
@@ -851,6 +877,38 @@ input[type="file"] {
 .delay-1 { transition-delay: 0.2s; }
 .delay-2 { transition-delay: 0.4s; }
 .delay-3 { transition-delay: 0.6s; }
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 32px, 100%);
+  }
+  .glass-card {
+    border-radius: 18px;
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 44px;
+  }
+  .hero-subtitle {
+    margin-bottom: 4px;
+  }
+  .hero-title {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .hero-date {
+    letter-spacing: 0.28em;
+    margin-top: 22px;
+  }
+  .hero-photo-wrapper {
+    max-width: 100%;
+    aspect-ratio: 4 / 5.25;
+    border-radius: 16px;
+  }
+}
 
 @media (max-width: 768px) {
   .hero-title { font-size: 4rem; }

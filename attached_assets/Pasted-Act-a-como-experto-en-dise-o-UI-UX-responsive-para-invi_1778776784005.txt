@@ -1,0 +1,213 @@
+Actúa como experto en diseño UI/UX responsive para invitaciones digitales de boda. Necesito optimizar el diseño actual para que en celular se vea más elegante, balanceado y profesional, sin perder la esencia visual actual.
+
+El diseño actual ya tiene buena dirección estética, pero en móvil se siente muy vertical, con textos demasiado grandes y espacios que pueden refinarse. Mantén la paleta de colores actual: verde olivo, dorado suave, alabaster/beige y tonos cálidos.
+
+Objetivo
+
+Optimizar el diseño responsive, especialmente en pantallas móviles, para que la portada y las secciones principales se vean más equilibradas, elegantes y legibles.
+
+Ajustes generales responsive
+1. Hero / portada
+
+Optimiza el hero en mobile para que tenga mejor proporción visual.
+
+Actualmente el nombre de los novios se ve demasiado grande y genera mucho scroll. Ajusta los tamaños de texto con clamp() para que escalen mejor.
+
+Usar algo similar a:
+
+.hero-kicker {
+  font-size: clamp(1.8rem, 7vw, 3rem);
+}
+
+.hero-title {
+  font-size: clamp(3.2rem, 14vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.hero-date {
+  font-size: clamp(0.85rem, 3.4vw, 1.25rem);
+  letter-spacing: 0.35em;
+}
+
+En mobile, el título debe seguir sintiéndose protagonista, pero sin ocupar demasiado alto de pantalla.
+
+2. Espaciados del hero
+
+Reducir ligeramente los espacios verticales en celular.
+
+En mobile:
+
+.hero-section {
+  padding: 48px 20px 32px;
+  min-height: auto;
+}
+
+.hero-title-wrapper {
+  margin-bottom: 24px;
+}
+
+.hero-date {
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+El objetivo es que el usuario alcance a ver parte de la imagen destacada sin tener que hacer demasiado scroll.
+
+3. Imagen destacada
+
+La imagen se ve bien, pero necesita una proporción más elegante y controlada en responsive.
+
+Aplicar:
+
+.featured-photo {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.featured-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+En desktop puede usar una proporción más horizontal o editorial, pero en mobile debe mantenerse vertical y limpia.
+
+Agregar un borde sutil en dorado/beige:
+
+.featured-photo {
+  border: 1px solid rgba(184, 147, 83, 0.35);
+  box-shadow: 0 18px 40px rgba(50, 70, 50, 0.10);
+}
+4. Contenedor principal
+
+Asegura que todas las secciones tengan un ancho controlado y buen padding lateral:
+
+.section-container {
+  width: min(100% - 40px, 1080px);
+  margin: 0 auto;
+}
+
+En móvil:
+
+@media (max-width: 640px) {
+  .section-container {
+    width: min(100% - 32px, 100%);
+  }
+}
+5. Fondo y profundidad visual
+
+El fondo actual se siente limpio, pero puede mejorar con un degradado muy sutil para dar sensación premium.
+
+Usar:
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(184, 147, 83, 0.10), transparent 32%),
+    linear-gradient(180deg, #f7f2e8 0%, #efe7d8 100%);
+}
+
+No usar fondos saturados ni contrastes fuertes.
+
+Ajustes mobile específicos
+
+Agregar media queries para pantallas pequeñas:
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 44px;
+  }
+
+  .hero-kicker {
+    margin-bottom: 4px;
+  }
+
+  .hero-title {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .hero-date {
+    letter-spacing: 0.28em;
+    margin-top: 22px;
+  }
+
+  .featured-photo {
+    max-width: 100%;
+    aspect-ratio: 4 / 5.25;
+    border-radius: 16px;
+  }
+}
+Mejoras de jerarquía visual
+
+La portada debe quedar así:
+
+“¡Nos Casamos!” como texto emocional, en dorado, más pequeño que los nombres.
+“Viviana & Carlos” como elemento principal.
+Fecha con tracking elegante, pero no tan separada en pantallas pequeñas.
+Foto destacada visible inmediatamente después, con estilo editorial.
+
+Evitar que el texto y la fecha se sientan flotando demasiado separados entre sí.
+
+Detalles visuales recomendados
+
+Agregar un pequeño ornamento entre la fecha y la imagen, pero muy sutil:
+
+<div className="wedding-divider">✦</div>
+
+Con estilo:
+
+.wedding-divider {
+  color: rgba(184, 147, 83, 0.45);
+  font-size: 18px;
+  margin: 14px 0 18px;
+}
+
+También puede ser una línea fina:
+
+.wedding-divider::before,
+.wedding-divider::after {
+  content: "";
+  display: inline-block;
+  width: 42px;
+  height: 1px;
+  background: rgba(184, 147, 83, 0.25);
+  vertical-align: middle;
+  margin: 0 12px;
+}
+Optimización de secciones siguientes
+
+Todas las cards posteriores deben tener:
+
+.card {
+  border-radius: 22px;
+  padding: clamp(22px, 5vw, 40px);
+  background: rgba(255, 252, 244, 0.78);
+  border: 1px solid rgba(184, 147, 83, 0.18);
+  box-shadow: 0 16px 36px rgba(50, 70, 50, 0.08);
+}
+
+En mobile:
+
+@media (max-width: 640px) {
+  .card {
+    border-radius: 18px;
+    padding: 22px 18px;
+  }
+}
+Reglas importantes
+No cambiar la identidad visual actual.
+No cambiar la paleta.
+No cambiar nombres ni fecha.
+No romper funcionalidades existentes.
+Mantener la invitación elegante y limpia.
+Priorizar experiencia móvil.
+Verificar que no haya overflow horizontal.
+Revisar tamaños en pantallas de 390px, 414px y 430px de ancho.
+El diseño debe verse premium, no saturado.
+
+Resultado esperado: una invitación digital de boda más refinada, con mejor proporción en celular, mejor lectura, menos scroll innecesario y una composición más elegante desde la primera pantalla.
