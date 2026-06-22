@@ -19,7 +19,7 @@
                 <div class="envelope-flap bottom"></div>
                 <div class="envelope-flap left"></div>
                 <div class="envelope-flap right"></div>
-                <div class="wax-seal">V&C</div>
+                <img class="wax-seal" src="/botonBoda.png" alt="Abrir invitación">
                 <div class="letter">
                     <p class="letter-names">Viviana & Carlos</p>
                     <p class="letter-invite">Te invitan a su boda</p>
@@ -34,9 +34,14 @@
         <!-- Nav -->
     <nav class="sticky-nav" id="navbar">
         <div class="nav-monogram">V & C</div>
-        <div class="nav-links">
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
             <a href="#detalles">Detalles</a>
-            <a href="#dresscode">Dress Code</a>
+            <a href="#dresscode">Vestimenta</a>
             <a href="#regalos">Mesa de Regalos</a>
             <a href="#rsvp">RSVP</a>
         </div>
@@ -47,17 +52,20 @@
         <div class="hero-bg-botanical">
             <!-- Inline SVG faint botanical -->
             <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" opacity="0.1">
-                <path d="M400,100 C500,200 600,300 700,400 C600,500 500,600 400,700 C300,600 200,500 100,400 C200,300 300,200 400,100 Z" fill="none" stroke="var(--forest-green)" stroke-width="2"/>
-                <circle cx="400" cy="400" r="200" fill="none" stroke="var(--dusty-rose)" stroke-width="1"/>
-                <path d="M400,200 Q500,400 400,600 Q300,400 400,200 Z" fill="none" stroke="var(--antique-gold)" stroke-width="1.5"/>
+                <path d="M400,100 C500,200 600,300 700,400 C600,500 500,600 400,700 C300,600 200,500 100,400 C200,300 300,200 400,100 Z" fill="none" stroke="var(--olive)" stroke-width="2"/>
+                <circle cx="400" cy="400" r="200" fill="none" stroke="var(--sage)" stroke-width="1"/>
+                <path d="M400,200 Q500,400 400,600 Q300,400 400,200 Z" fill="none" stroke="var(--beige)" stroke-width="1.5"/>
             </svg>
         </div>
         <div class="hero-content">
-            <h2 class="hero-subtitle stagger-1">¡Nos Casamos!</h2>
-            <h1 class="hero-title stagger-2">Viviana & Carlos</h1>
-            <p class="hero-date stagger-3">07 · NOVIEMBRE · 2026</p>
-            
-            <div class="wedding-divider stagger-3">✦</div>
+            <div class="hero-intro">
+                <h2 class="hero-subtitle stagger-1">¡Nos Casamos!</h2>
+                <h1 class="hero-title stagger-2">Viviana & Carlos</h1>
+                <div class="hero-date-wrap stagger-3">
+                    <div class="wedding-divider">✦</div>
+                    <p class="hero-date">07 · NOVIEMBRE · 2026</p>
+                </div>
+            </div>
             
             <div class="hero-photo-wrapper stagger-4">
                 <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop" alt="Viviana y Carlos" class="hero-photo">
@@ -78,44 +86,68 @@
             </div>
 
             <div class="cards-grid">
-                <div class="glass-card fade-up">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    <h3>Fecha</h3>
-                    <p>Sábado<br>07 Nov 2026</p>
+                <div class="glass-card detail-card fade-up">
+                    <div class="detail-card__icon-wrap">
+                        <svg class="detail-card__icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <span class="detail-card__label">Fecha</span>
+                    <p class="detail-card__value">Sábado</p>
+                    <p class="detail-card__meta">07 · Nov · 2026</p>
                 </div>
-                <div class="glass-card fade-up delay-1">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    <h3>Hora</h3>
-                    <p>19:30 hrs</p>
+                <div class="glass-card detail-card fade-up delay-1">
+                    <div class="detail-card__icon-wrap">
+                        <svg class="detail-card__icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <span class="detail-card__label">Hora</span>
+                    <p class="detail-card__value">19:30</p>
+                    <p class="detail-card__meta">hrs</p>
                 </div>
-                <div class="glass-card fade-up delay-2">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <h3>Lugar</h3>
-                    <p>Hotel Camino Real Polanco<br><span class="small-text">Ciudad de México</span></p>
+                <div class="glass-card detail-card detail-card--action fade-up delay-2">
+                    <div class="detail-card__icon-wrap">
+                        <svg class="detail-card__icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <span class="detail-card__label">Lugar</span>
+                    <p class="detail-card__value">Hotel Camino Real Polanco</p>
+                    <p class="detail-card__meta">Ciudad de México</p>
+                    <a href="https://maps.app.goo.gl/NmrySfyMumuRuJGCA" class="btn-location" target="_blank" rel="noopener noreferrer">
+                        <span>Ver ubicación</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    </a>
                 </div>
             </div>
 
-            <div class="timeline-container fade-up delay-3">
-                <div class="timeline-line"></div>
-                <div class="timeline-point">
-                    <div class="tl-dot"></div>
-                    <div class="tl-time">11:00</div>
-                    <div class="tl-label">Recepción</div>
-                </div>
-                <div class="timeline-point">
-                    <div class="tl-dot"></div>
-                    <div class="tl-time">13:30</div>
-                    <div class="tl-label">Brindis</div>
-                </div>
-                <div class="timeline-point">
-                    <div class="tl-dot"></div>
-                    <div class="tl-time">15:00</div>
-                    <div class="tl-label">Cena</div>
-                </div>
-                <div class="timeline-point">
-                    <div class="tl-dot"></div>
-                    <div class="tl-time">16:00</div>
-                    <div class="tl-label">Fiesta</div>
+            <div class="timeline-wrap fade-up delay-3">
+                <p class="timeline-eyebrow">Itinerario del día</p>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-point">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="tl-time">11:00</span>
+                            <span class="tl-label">Recepción</span>
+                        </div>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="tl-time">13:30</span>
+                            <span class="tl-label">Brindis</span>
+                        </div>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="tl-time">15:00</span>
+                            <span class="tl-label">Cena</span>
+                        </div>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="tl-time">16:00</span>
+                            <span class="tl-label">Fiesta</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,8 +156,9 @@
     <!-- 3. COUNTDOWN -->
     <section class="section-dark countdown-section">
         <div class="container text-center">
-            <h2 class="cormorant-title ivory">Faltan</h2>
-            <div class="countdown-grid" id="countdown">
+            <div class="countdown-wrap">
+                <h2 class="cormorant-title ivory">Faltan</h2>
+                <div class="countdown-grid" id="countdown">
                 <div class="cd-box">
                     <span class="cd-number" id="cd-days">00</span>
                     <span class="cd-label">Días</span>
@@ -142,16 +175,17 @@
                     <span class="cd-number" id="cd-seconds">00</span>
                     <span class="cd-label">Segundos</span>
                 </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 4. DRESS CODE -->
     <section class="section-light dresscode-section" id="dresscode">
-        <svg class="floral-divider top" viewBox="0 0 100 20" width="100" height="20"><path d="M10,10 Q50,0 90,10 Q50,20 10,10 Z" fill="var(--dusty-rose)" opacity="0.3"/></svg>
+        <svg class="floral-divider top" viewBox="0 0 100 20" width="100" height="20"><path d="M10,10 Q50,0 90,10 Q50,20 10,10 Z" fill="var(--sage)" opacity="0.35"/></svg>
         
         <div class="container text-center">
-            <h2 class="cormorant-title gold italic">Dress Code</h2>
+            <h2 class="cormorant-title gold italic">Vestimenta</h2>
             <p class="dresscode-main">Formal Elegante</p>
             
             <div class="dresscode-columns">
@@ -167,10 +201,13 @@
                 </div>
             </div>
 
-            <p class="dc-note fade-up delay-2"><i>* Evita el blanco y el negro *</i></p>
+            <div class="dc-notes fade-up delay-2">
+                <p class="dc-note"><i>* Evita el blanco, beige y verde *</i></p>
+                <p class="dc-note"><i>* Celebración solo para adultos (no niños) *</i></p>
+            </div>
         </div>
 
-        <svg class="floral-divider bottom" viewBox="0 0 100 20" width="100" height="20"><path d="M10,10 Q50,0 90,10 Q50,20 10,10 Z" fill="var(--dusty-rose)" opacity="0.3"/></svg>
+        <svg class="floral-divider bottom" viewBox="0 0 100 20" width="100" height="20"><path d="M10,10 Q50,0 90,10 Q50,20 10,10 Z" fill="var(--sage)" opacity="0.35"/></svg>
     </section>
 
     <!-- 5. MESA DE REGALOS -->
@@ -181,28 +218,40 @@
 
             <div class="gifts-grid">
                 <div class="gift-card fade-up">
-                    <svg class="gold-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-                    <h3>Liverpool</h3>
-                    <p>Encuentra aquí nuestra lista de opciones seleccionadas.</p>
-                    <p class="evento-num">Evento: 50403020</p>
-                    <button class="btn-primary">VER MESA DE REGALOS</button>
+                    <div class="gift-card__icon-wrap">
+                        <svg class="gift-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                    </div>
+                    <span class="gift-card__type">Mesa de regalos</span>
+                    <h3 class="gift-card__title">Liverpool</h3>
+                    <p class="gift-card__text">Encuentra aquí nuestra lista de opciones seleccionadas.</p>
+                    <p class="gift-card__code">Evento · 51816188</p>
+                    <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51816188" class="btn-gift" target="_blank" rel="noopener noreferrer">
+                        <span>Ver mesa de regalos</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    </a>
                 </div>
                 
                 <div class="gift-card fade-up delay-1">
-                    <svg class="gold-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
-                    <h3>Cuenta Bancaria</h3>
-                    <p>Transferencia bancaria o depósito directo.</p>
+                    <div class="gift-card__icon-wrap">
+                        <svg class="gift-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                    </div>
+                    <span class="gift-card__type">Transferencia</span>
+                    <h3 class="gift-card__title">Cuenta Bancaria</h3>
+                    <p class="gift-card__text">Transferencia bancaria o depósito directo.</p>
                     <div class="bank-details-block">
-                        <div class="b-row"><span>Banco:</span> <strong>BBVA</strong></div>
-                        <div class="b-row"><span>CLABE:</span> <strong>012345678901234567</strong></div>
-                        <div class="b-row"><span>Nombre:</span> <strong>Carlos y Viviana</strong></div>
+                        <div class="b-row"><span>Banco</span> <strong>BBVA</strong></div>
+                        <div class="b-row"><span>CLABE</span> <strong>012345678901234567</strong></div>
+                        <div class="b-row"><span>Nombre</span> <strong>Carlos y Viviana</strong></div>
                     </div>
                 </div>
 
-                <div class="gift-card soft fade-up delay-2">
-                    <svg class="gold-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    <h3>El día del evento</h3>
-                    <p>Habrá un espacio especial para recibir tu detalle el día de nuestra boda.</p>
+                <div class="gift-card gift-card--soft fade-up delay-2">
+                    <div class="gift-card__icon-wrap">
+                        <svg class="gift-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </div>
+                    <span class="gift-card__type">Presencial</span>
+                    <h3 class="gift-card__title">El día del evento</h3>
+                    <p class="gift-card__text">Habrá un espacio especial para recibir tu detalle el día de nuestra boda.</p>
                 </div>
             </div>
         </div>
@@ -229,7 +278,7 @@
                 </div>
                 <button type="submit" class="btn-submit">DEJAR MENSAJE</button>
                 <div id="gb-success" class="success-message" style="display:none;">
-                    ¡Gracias por tu mensaje! <svg viewBox="0 0 24 24" width="16" height="16" fill="var(--dusty-rose)" stroke="none" style="vertical-align: middle; animation: pulse 1s infinite;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    ¡Gracias por tu mensaje! <svg viewBox="0 0 24 24" width="16" height="16" fill="var(--sage)" stroke="none" style="vertical-align: middle; animation: pulse 1s infinite;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                 </div>
             </form>
         </div>
@@ -239,8 +288,11 @@
     <section class="section-dark rsvp-section" id="rsvp">
         <div class="container text-center">
             <h2 class="cormorant-title ivory">Confirmación</h2>
-            <p class="rsvp-text">Por favor, confirma tu asistencia antes del:</p>
-            <p class="rsvp-date">15 de Octubre de 2026</p>
+
+            <div class="rsvp-notes fade-up">
+                <p class="rsvp-note"><i>Evita vestir blanco, beige o verde.</i></p>
+                <p class="rsvp-note"><i>Celebración solo para adultos (no niños).</i></p>
+            </div>
             
             <button class="btn-large-gold fade-up">CONFIRMAR ASISTENCIA</button>
         </div>

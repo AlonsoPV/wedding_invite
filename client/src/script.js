@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Nav Scroll
     const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > window.innerHeight - 100) {
             navbar.classList.add('visible');
@@ -46,6 +49,33 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('visible');
         }
     });
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Abrir menú');
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!navbar.contains(event.target)) {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Abrir menú');
+            }
+        });
+    }
 
     // Fade Up Observer
     const fadeElements = document.querySelectorAll('.fade-up');
