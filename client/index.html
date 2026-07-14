@@ -29,6 +29,9 @@
         </div>
     </div>
 
+    <!-- Arrocitos cayendo -->
+    <div id="rice-container" aria-hidden="true"></div>
+
     <!-- MAIN INVITATION SCREEN -->
     <div id="invitation-screen" class="invitation-screen">
         <!-- Nav -->
@@ -59,11 +62,12 @@
         </div>
         <div class="hero-content">
             <div class="hero-intro">
-                <h2 class="hero-subtitle stagger-1">¡Nos Casamos!</h2>
+                <h2 class="hero-subtitle stagger-1">NUESTRA BODA</h2>
                 <h1 class="hero-title stagger-2">Viviana & Carlos</h1>
                 <div class="hero-date-wrap stagger-3">
                     <div class="wedding-divider">✦</div>
                     <p class="hero-date">07 · NOVIEMBRE · 2026</p>
+                    <p class="hero-location">CIUDAD DE MÉXICO</p>
                 </div>
             </div>
             
@@ -71,7 +75,27 @@
                 <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop" alt="Viviana y Carlos" class="hero-photo">
             </div>
             
-            <p class="hero-quote stagger-5">"Con amor, celebramos este momento"</p>
+            <div class="hero-countdown stagger-5">
+                <p class="hero-countdown__label">Faltan</p>
+                <div class="countdown-grid" id="countdown">
+                    <div class="cd-box">
+                        <span class="cd-number" id="cd-days">00</span>
+                        <span class="cd-label">Días</span>
+                    </div>
+                    <div class="cd-box">
+                        <span class="cd-number" id="cd-hours">00</span>
+                        <span class="cd-label">Horas</span>
+                    </div>
+                    <div class="cd-box">
+                        <span class="cd-number" id="cd-minutes">00</span>
+                        <span class="cd-label">Minutos</span>
+                    </div>
+                    <div class="cd-box pulse">
+                        <span class="cd-number" id="cd-seconds">00</span>
+                        <span class="cd-label">Segundos</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="scroll-indicator"></div>
     </section>
@@ -91,16 +115,16 @@
                         <svg class="detail-card__icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                     </div>
                     <span class="detail-card__label">Fecha</span>
-                    <p class="detail-card__value">Sábado</p>
-                    <p class="detail-card__meta">07 · Nov · 2026</p>
+                    <p class="detail-card__value">Sábado 07 de noviembre</p>
+                    <p class="detail-card__meta">del 2026</p>
                 </div>
                 <div class="glass-card detail-card fade-up delay-1">
                     <div class="detail-card__icon-wrap">
                         <svg class="detail-card__icon" viewBox="0 0 24 24" stroke="currentColor" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                     </div>
                     <span class="detail-card__label">Hora</span>
-                    <p class="detail-card__value">19:30</p>
-                    <p class="detail-card__meta">hrs</p>
+                    <p class="detail-card__value">18:45</p>
+                    <p class="detail-card__meta">horas</p>
                 </div>
                 <div class="glass-card detail-card detail-card--action fade-up delay-2">
                     <div class="detail-card__icon-wrap">
@@ -117,94 +141,79 @@
             </div>
 
             <div class="timeline-wrap fade-up delay-3">
-                <p class="timeline-eyebrow">Itinerario del día</p>
+                <p class="timeline-eyebrow">Itinerario</p>
                 <div class="timeline-container">
                     <div class="timeline-line"></div>
                     <div class="timeline-point">
                         <div class="timeline-node"></div>
                         <div class="timeline-card">
-                            <span class="tl-time">11:00</span>
+                            <span class="tl-time">18:45</span>
+                            <span class="tl-label">Ceremonia civil</span>
+                        </div>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="tl-time">20:30</span>
+                            <span class="tl-label">Cóctel</span>
+                        </div>
+                    </div>
+                    <div class="timeline-point">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="tl-time">21:30</span>
                             <span class="tl-label">Recepción</span>
                         </div>
                     </div>
-                    <div class="timeline-point">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-card">
-                            <span class="tl-time">13:30</span>
-                            <span class="tl-label">Brindis</span>
-                        </div>
-                    </div>
-                    <div class="timeline-point">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-card">
-                            <span class="tl-time">15:00</span>
-                            <span class="tl-label">Cena</span>
-                        </div>
-                    </div>
-                    <div class="timeline-point">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-card">
-                            <span class="tl-time">16:00</span>
-                            <span class="tl-label">Fiesta</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. COUNTDOWN -->
-    <section class="section-dark countdown-section">
-        <div class="container text-center">
-            <div class="countdown-wrap">
-                <h2 class="cormorant-title ivory">Faltan</h2>
-                <div class="countdown-grid" id="countdown">
-                <div class="cd-box">
-                    <span class="cd-number" id="cd-days">00</span>
-                    <span class="cd-label">Días</span>
-                </div>
-                <div class="cd-box">
-                    <span class="cd-number" id="cd-hours">00</span>
-                    <span class="cd-label">Horas</span>
-                </div>
-                <div class="cd-box">
-                    <span class="cd-number" id="cd-minutes">00</span>
-                    <span class="cd-label">Minutos</span>
-                </div>
-                <div class="cd-box pulse">
-                    <span class="cd-number" id="cd-seconds">00</span>
-                    <span class="cd-label">Segundos</span>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. DRESS CODE -->
+    <!-- 3. DRESS CODE -->
     <section class="section-light dresscode-section" id="dresscode">
         <svg class="floral-divider top" viewBox="0 0 100 20" width="100" height="20"><path d="M10,10 Q50,0 90,10 Q50,20 10,10 Z" fill="var(--sage)" opacity="0.35"/></svg>
         
         <div class="container text-center">
-            <h2 class="cormorant-title gold italic">Vestimenta</h2>
-            <p class="dresscode-main">Formal Elegante</p>
+            <h2 class="cormorant-title">Vestimenta</h2>
+            <p class="dresscode-main">Vestimenta Formal</p>
             
             <div class="dresscode-columns">
                 <div class="dc-col fade-up">
-                    <div class="swatch rose"></div>
+                    <div class="dc-figure dc-figure--woman" aria-hidden="true">
+                        <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <circle cx="50" cy="20" r="12" opacity="0.18"/>
+                            <circle cx="50" cy="20" r="10.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                            <path d="M50 31.5c0 3.5 0 6.5 0 9.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            <path d="M37 41h26l-3 8c-1.2 3.2-1.8 7.2-2 12.2L56.5 118c0 2.8-2 4.5-6.5 4.5s-6.5-1.7-6.5-4.5L42 61.2c-.2-5-.8-9-2-12.2L37 41z" opacity="0.14"/>
+                            <path d="M37 41h26l-3 8c-1.2 3.2-1.8 7.2-2 12.2L56.5 118c0 2.8-2 4.5-6.5 4.5s-6.5-1.7-6.5-4.5L42 61.2c-.2-5-.8-9-2-12.2L37 41z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M41.5 74c2.8 1.6 6.2 2.5 8.5 2.5s5.7-.9 8.5-2.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+                        </svg>
+                    </div>
                     <h3>Mujer</h3>
-                    <p>Vestido largo de noche.<br>Colores sobrios y elegantes.</p>
+                    <p>Vestido largo</p>
                 </div>
                 <div class="dc-col fade-up delay-1">
-                    <div class="swatch green"></div>
+                    <div class="dc-figure dc-figure--man" aria-hidden="true">
+                        <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <circle cx="50" cy="20" r="12" opacity="0.18"/>
+                            <circle cx="50" cy="20" r="10.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                            <path d="M50 31.5v8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            <path d="M33 40.5h34l-5 10H38l-5-10z" opacity="0.12"/>
+                            <path d="M33 40.5h34l-5 10H38l-5-10z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M38 50.5v46h24v-46" opacity="0.1"/>
+                            <path d="M38 50.5v46h24v-46" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M46 54.5c1.2 2.8 2.6 4.2 4 4.2s2.8-1.4 4-4.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M33 40.5c-3 7-5 16-6 26M67 40.5c3 7 5 16 6 26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            <path d="M38 96.5v16c0 1.2.8 2.2 2.2 2.2h5.6M62 96.5v16c0 1.2-.8 2.2-2.2 2.2h-5.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Hombre</h3>
-                    <p>Traje completo oscuro.<br>Corbata o moño formal.</p>
+                    <p>Traje completo (corbata)</p>
                 </div>
             </div>
 
-            <div class="dc-notes fade-up delay-2">
-                <p class="dc-note"><i>* Evita el blanco, beige y verde *</i></p>
-                <p class="dc-note"><i>* Celebración solo para adultos (no niños) *</i></p>
-            </div>
+            <p class="dc-note fade-up delay-2">Les pedimos amablemente evitar el uso de blanco, beige y verde</p>
         </div>
 
         <svg class="floral-divider bottom" viewBox="0 0 100 20" width="100" height="20"><path d="M10,10 Q50,0 90,10 Q50,20 10,10 Z" fill="var(--sage)" opacity="0.35"/></svg>
@@ -245,13 +254,17 @@
                     </div>
                 </div>
 
-                <div class="gift-card gift-card--soft fade-up delay-2">
+                <div class="gift-card fade-up delay-2">
                     <div class="gift-card__icon-wrap">
-                        <svg class="gift-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        <svg class="gift-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                     </div>
-                    <span class="gift-card__type">Presencial</span>
-                    <h3 class="gift-card__title">El día del evento</h3>
-                    <p class="gift-card__text">Habrá un espacio especial para recibir tu detalle el día de nuestra boda.</p>
+                    <span class="gift-card__type">Mesa de regalos</span>
+                    <h3 class="gift-card__title">Amazon</h3>
+                    <p class="gift-card__text">También puedes encontrar opciones en nuestra mesa de regalos de Amazon.</p>
+                    <a href="https://www.amazon.com.mx/wedding/guest-view/21F5FRFIPB7CJ" class="btn-gift" target="_blank" rel="noopener noreferrer">
+                        <span>Ver mesa de Amazon</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -272,10 +285,6 @@
                     <textarea id="gb-message" rows="4" required placeholder=" "></textarea>
                     <label for="gb-message">Tu mensaje para los novios</label>
                 </div>
-                <div class="form-group file-group">
-                    <label for="gb-photo" class="file-label">Sube una foto (opcional)</label>
-                    <input type="file" id="gb-photo" accept="image/*">
-                </div>
                 <button type="submit" class="btn-submit">DEJAR MENSAJE</button>
                 <div id="gb-success" class="success-message" style="display:none;">
                     ¡Gracias por tu mensaje! <svg viewBox="0 0 24 24" width="16" height="16" fill="var(--sage)" stroke="none" style="vertical-align: middle; animation: pulse 1s infinite;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
@@ -287,16 +296,72 @@
     <!-- 7. CONFIRMACIÓN -->
     <section class="section-dark rsvp-section" id="rsvp">
         <div class="container text-center">
+            <p class="rsvp-adults fade-up">Apreciamos su comprensión, ésta será una celebración exclusivamente para adultos</p>
             <h2 class="cormorant-title ivory">Confirmación</h2>
-
-            <div class="rsvp-notes fade-up">
-                <p class="rsvp-note"><i>Evita vestir blanco, beige o verde.</i></p>
-                <p class="rsvp-note"><i>Celebración solo para adultos (no niños).</i></p>
-            </div>
-            
-            <button class="btn-large-gold fade-up">CONFIRMAR ASISTENCIA</button>
+            <button class="btn-large-gold fade-up" type="button" id="rsvp-btn">CONFIRMAR ASISTENCIA</button>
         </div>
     </section>
+
+    <!-- RSVP Modal -->
+    <div class="rsvp-modal" id="rsvp-modal" aria-hidden="true">
+        <div class="rsvp-modal__backdrop" data-rsvp-close></div>
+        <div class="rsvp-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="rsvp-modal-title">
+            <button type="button" class="rsvp-modal__close" data-rsvp-close aria-label="Cerrar">×</button>
+
+            <div class="rsvp-modal__view" id="rsvp-form-view">
+                <p class="rsvp-modal__eyebrow">RSVP</p>
+                <h3 class="rsvp-modal__title" id="rsvp-modal-title">Confirmar asistencia</h3>
+
+                <form class="rsvp-form" id="rsvp-form">
+                    <div class="rsvp-field">
+                        <label for="rsvp-fullname">Nombre completo</label>
+                        <input type="text" id="rsvp-fullname" name="fullName" required autocomplete="name" placeholder="Tu nombre">
+                    </div>
+
+                    <fieldset class="rsvp-fieldset">
+                        <legend>Confirma el nombre de tus invitados</legend>
+                        <div class="rsvp-field">
+                            <label for="rsvp-guest-1">Invitado 1</label>
+                            <input type="text" id="rsvp-guest-1" name="guest1" placeholder="Nombre del invitado">
+                        </div>
+                        <div class="rsvp-field">
+                            <label for="rsvp-guest-2">Invitado 2</label>
+                            <input type="text" id="rsvp-guest-2" name="guest2" placeholder="Nombre del invitado">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="rsvp-fieldset">
+                        <legend>Restricción alimenticia</legend>
+                        <label class="rsvp-check">
+                            <input type="checkbox" name="diet" value="vegetariano">
+                            <span>Vegetariano</span>
+                        </label>
+                        <label class="rsvp-check">
+                            <input type="checkbox" name="diet" value="vegano">
+                            <span>Vegano</span>
+                        </label>
+                        <label class="rsvp-check">
+                            <input type="checkbox" name="diet" value="alergia" id="rsvp-allergy-check">
+                            <span>Alergia</span>
+                        </label>
+                        <div class="rsvp-field rsvp-allergy-detail" id="rsvp-allergy-detail" hidden>
+                            <label for="rsvp-allergy-text">Escribir a qué cosa</label>
+                            <input type="text" id="rsvp-allergy-text" name="allergyDetail" placeholder="Ej. nueces, gluten, mariscos">
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="rsvp-form__submit">Enviar confirmación</button>
+                </form>
+            </div>
+
+            <div class="rsvp-modal__view rsvp-thanks" id="rsvp-thanks-view" hidden>
+                <div class="rsvp-thanks__mark" aria-hidden="true">✦</div>
+                <h3 class="rsvp-modal__title">¡Gracias!</h3>
+                <p class="rsvp-thanks__text">Hemos recibido tu confirmación. Nos emociona mucho compartir este día contigo.</p>
+                <button type="button" class="rsvp-form__submit" data-rsvp-close>Cerrar</button>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="/src/script.js"></script>
 </body>

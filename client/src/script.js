@@ -8,24 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
         envelopeWrapper.addEventListener('click', () => {
             envelopeWrapper.classList.add('open');
             
-            // Wait for letter to slide up, then expand it
+            // Wait for letter to rise and give time to read the message
             setTimeout(() => {
                 envelopeWrapper.classList.add('expand');
                 
-                // Switch screens while expanding
+                // Switch screens after the expand begins
                 setTimeout(() => {
                     envelopeScreen.classList.remove('active');
                     invitationScreen.classList.add('active');
                     
-                    // Trigger hero animations after envelope disappears
                     setTimeout(() => {
                         const heroElements = document.querySelectorAll('.hero .stagger-1, .hero .stagger-2, .hero .stagger-3, .hero .stagger-4, .hero .stagger-5');
                         heroElements.forEach(el => {
                             el.style.animationPlayState = 'running';
                         });
+                        initRice();
                     }, 100);
-                }, 800);
-            }, 800);
+                }, 1200);
+            }, 2800);
         });
     }
 
@@ -133,4 +133,130 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCountdown();
         setInterval(updateCountdown, 1000);
     }
+
+    // Falling rice (arrocitos)
+    function initRice() {
+        const container = document.getElementById('rice-container');
+        if (!container || container.dataset.ready === 'true') return;
+        container.dataset.ready = 'true';
+
+        const count = 40;
+        for (let i = 0; i < count; i++) {
+            createRiceGrain(container);
+        }
+    }
+
+    function createRiceGrain(container) {
+        const grain = document.createElement('span');
+        grain.className = 'rice-grain';
+
+        const width = Math.random() * 4 + 3;
+        const height = width * (1.8 + Math.random() * 0.8);
+        const left = Math.random() * 100;
+        const duration = Math.random() * 10 + 14;
+        const delay = Math.random() * 12;
+        const drift = (Math.random() * 60 - 30).toFixed(1);
+        const spin = Math.random() > 0.5 ? 1 : -1;
+        const tones = ['#F3F1E5', '#CFC8B5', '#E8E2D2', '#BDB5A0'];
+
+        grain.style.width = `${width}px`;
+        grain.style.height = `${height}px`;
+        grain.style.left = `${left}vw`;
+        grain.style.background = tones[Math.floor(Math.random() * tones.length)];
+        grain.style.animationDuration = `${duration}s`;
+        grain.style.animationDelay = `-${delay}s`;
+        grain.style.setProperty('--drift', `${drift}vw`);
+        grain.style.setProperty('--spin', String(spin));
+
+        container.appendChild(grain);
+    }
+
+    // RSVP modal form
+    const rsvpBtn = document.getElementById('rsvp-btn');
+    const rsvpModal = document.getElementById('rsvp-modal');
+    const rsvpForm = document.getElementById('rsvp-form');
+    const rsvpFormView = document.getElementById('rsvp-form-view');
+    const rsvpThanksView = document.getElementById('rsvp-thanks-view');
+    const allergyCheck = document.getElementById('rsvp-allergy-check');
+    const allergyDetail = document.getElementById('rsvp-allergy-detail');
+    const allergyText = document.getElementById('rsvp-allergy-text');
+
+    function openRsvpModal() {
+        if (!rsvpModal) return;
+        rsvpModal.classList.add('is-open');
+        rsvpModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('rsvp-open');
+        if (rsvpFormView && rsvpThanksView) {
+            rsvpFormView.hidden = false;
+            rsvpThanksView.hidden = true;
+        }
+        document.getElementById('rsvp-fullname')?.focus();
+    }
+
+    function closeRsvpModal() {
+        if (!rsvpModal) return;
+        rsvpModal.classList.remove('is-open');
+        rsvpModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('rsvp-open');
+    }
+
+    if (rsvpBtn) {
+        rsvpBtn.addEventListener('click', openRsvpModal);
+    }
+
+    rsvpModal?.querySelectorAll('[data-rsvp-close]').forEach((el) => {
+        el.addEventListener('click', closeRsvpModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && rsvpModal?.classList.contains('is-open')) {
+            closeRsvpModal();
+        }
+    });
+
+    allergyCheck?.addEventListener('change', () => {
+        const enabled = allergyCheck.checked;
+        if (allergyDetail) allergyDetail.hidden = !enabled;
+        if (allergyText) {
+            allergyText.required = enabled;
+            if (!enabled) allergyText.value = '';
+        }
+    });
+
+    rsvpForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (allergyCheck?.checked && allergyText && !allergyText.value.trim()) {
+            allergyText.focus();
+            return;
+        }
+
+        const formData = new FormData(rsvpForm);
+        const diets = formData.getAll('diet');
+        const payload = {
+            fullName: formData.get('fullName'),
+            guest1: formData.get('guest1'),
+            guest2: formData.get('guest2'),
+            diets,
+            allergyDetail: formData.get('allergyDetail') || '',
+            submittedAt: new Date().toISOString(),
+        };
+
+        try {
+            const existing = JSON.parse(localStorage.getItem('weddingRsvps') || '[]');
+            existing.push(payload);
+            localStorage.setItem('weddingRsvps', JSON.stringify(existing));
+        } catch (_) {
+            // Ignore storage errors
+        }
+
+        rsvpForm.reset();
+        if (allergyDetail) allergyDetail.hidden = true;
+        if (allergyText) allergyText.required = false;
+
+        if (rsvpFormView && rsvpThanksView) {
+            rsvpFormView.hidden = true;
+            rsvpThanksView.hidden = false;
+        }
+    });
 });
