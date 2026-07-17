@@ -96,9 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => observer.observe(el));
 
     // Countdown Timer
-    // Target: November 7, 2026 at 11:00 AM Mexico City time
-    // We will use standard time (-06:00)
-    const targetDate = new Date('2026-11-07T11:00:00-06:00').getTime();
+    // Target: November 7, 2026 at 18:45 Mexico City time (UTC-6)
+    const targetDate = new Date('2026-11-07T18:45:00-06:00').getTime();
 
     const daysEl = document.getElementById('cd-days');
     const hoursEl = document.getElementById('cd-hours');
@@ -180,6 +179,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const allergyCheck = document.getElementById('rsvp-allergy-check');
     const allergyDetail = document.getElementById('rsvp-allergy-detail');
     const allergyText = document.getElementById('rsvp-allergy-text');
+    const attendingFields = document.getElementById('rsvp-attending-fields');
+    const companionDetail = document.getElementById('rsvp-companion-detail');
+    const companionName = document.getElementById('rsvp-companion-name');
+
+    function syncAttendanceFields() {
+        const attendance = rsvpForm?.querySelector('input[name="attendance"]:checked')?.value;
+        const isAttending = attendance !== 'no';
+        if (attendingFields) attendingFields.hidden = !isAttending;
+
+        if (!isAttending) {
+            if (allergyDetail) allergyDetail.hidden = true;
+            if (allergyText) {
+                allergyText.required = false;
+                allergyText.value = '';
+            }
+            if (allergyCheck) allergyCheck.checked = false;
+            if (companionDetail) companionDetail.hidden = true;
+            if (companionName) {
+                companionName.required = false;
+                companionName.value = '';
+            }
+            return;
+        }
+
+        syncCompanionFields();
+    }
+
+    function syncCompanionFields() {
+        const withCompanion = rsvpForm?.querySelector('input[name="companion"]:checked')?.value === 'con';
+        if (companionDetail) companionDetail.hidden = !withCompanion;
+        if (companionName) {
+            companionName.required = withCompanion;
+            if (!withCompanion) companionName.value = '';
+        }
+    }
 
     function openRsvpModal() {
         if (!rsvpModal) return;
@@ -190,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
             rsvpFormView.hidden = false;
             rsvpThanksView.hidden = true;
         }
+        syncAttendanceFields();
         document.getElementById('rsvp-fullname')?.focus();
     }
 
@@ -214,6 +249,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    rsvpForm?.querySelectorAll('input[name="attendance"]').forEach((el) => {
+        el.addEventListener('change', syncAttendanceFields);
+    });
+
+    rsvpForm?.querySelectorAll('input[name="companion"]').forEach((el) => {
+        el.addEventListener('change', syncCompanionFields);
+    });
+
     allergyCheck?.addEventListener('change', () => {
         const enabled = allergyCheck.checked;
         if (allergyDetail) allergyDetail.hidden = !enabled;
@@ -226,19 +269,28 @@ document.addEventListener('DOMContentLoaded', () => {
     rsvpForm?.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        if (allergyCheck?.checked && allergyText && !allergyText.value.trim()) {
+        const formData = new FormData(rsvpForm);
+        const attendance = formData.get('attendance');
+        const companion = formData.get('companion');
+
+        if (attendance === 'si' && companion === 'con' && companionName && !companionName.value.trim()) {
+            companionName.focus();
+            return;
+        }
+
+        if (attendance === 'si' && allergyCheck?.checked && allergyText && !allergyText.value.trim()) {
             allergyText.focus();
             return;
         }
 
-        const formData = new FormData(rsvpForm);
-        const diets = formData.getAll('diet');
+        const diets = attendance === 'si' ? formData.getAll('diet') : [];
         const payload = {
             fullName: formData.get('fullName'),
-            guest1: formData.get('guest1'),
-            guest2: formData.get('guest2'),
+            attendance,
+            companion: attendance === 'si' ? companion : null,
+            companionName: attendance === 'si' && companion === 'con' ? formData.get('companionName') : '',
             diets,
-            allergyDetail: formData.get('allergyDetail') || '',
+            allergyDetail: attendance === 'si' ? (formData.get('allergyDetail') || '') : '',
             submittedAt: new Date().toISOString(),
         };
 
@@ -253,6 +305,9 @@ document.addEventListener('DOMContentLoaded', () => {
         rsvpForm.reset();
         if (allergyDetail) allergyDetail.hidden = true;
         if (allergyText) allergyText.required = false;
+        if (companionDetail) companionDetail.hidden = true;
+        if (companionName) companionName.required = false;
+        if (attendingFields) attendingFields.hidden = false;
 
         if (rsvpFormView && rsvpThanksView) {
             rsvpFormView.hidden = true;
